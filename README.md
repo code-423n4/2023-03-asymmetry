@@ -20,7 +20,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [x] Rename contest H1 below
 - [x] Update pot sizes
 - [x] Fill in start and end times in contest bullets below
-- [ ] Add link to submission form in contest details below
+- [x] Add link to submission form in contest details below
 - [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
 - [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
 - [x] Add sponsor to this private repo with 'maintain' level access.
@@ -62,15 +62,15 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Asymmetry contest details
-- Total Prize Pool: Sum of below awards
+- Total Prize Pool: $36,500
   - HM awards: $25,500 
   - QA report awards: #3,000 
-  - Gas report awards: $2,500 
-  - Judge + presort awards: $3,600
+  - Gas report awards: $1,500 
+  - Judge + presort awards: $5,200
   - Scout awards: $500 USDC
-  - (this line can be removed if there is no mitigation) Mitigation review contest: XXX XXX (*Opportunity goes to top X certified wardens based on placement in this contest.*)
+  - Mitigation review contest: $10,000 (*Opportunity goes to top X certified wardens based on placement in this contest.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-03-asymmetry-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts 24 March 2023 20:00 UTC
 - Ends 30 March 2023 20:00 UTC
