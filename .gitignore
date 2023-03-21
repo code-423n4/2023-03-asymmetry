@@ -108,3 +108,4 @@ dist
 cache/
 artifacts/
 .openzeppelin/
+typechain-types
