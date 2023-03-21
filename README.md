@@ -21,10 +21,10 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [x] Update pot sizes
 - [x] Fill in start and end times in contest bullets below
 - [x] Add link to submission form in contest details below
-- [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
+- [x] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
 - [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
 - [x] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
+- [x] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
 - [ ] Delete this checklist.
 
 # Repo setup
@@ -66,7 +66,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - HM awards: $25,500 
   - QA report awards: #3,000 
   - Gas report awards: $1,500 
-  - Judge + presort awards: $5,200
+  - Judge + presort awards: $6,000
   - Scout awards: $500 USDC
   - Mitigation review contest: $10,000 (*Opportunity goes to top X certified wardens based on placement in this contest.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
@@ -110,25 +110,25 @@ Automated findings output for the contest can be found [here](add link to report
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:  
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
+- How many contracts are in scope?:   6
+- Total SLoC for these contracts?:  933
+- How many external imports are there?:  12
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  12
+- Does most of your code generally use composition or inheritance?:   inheritance
+- How many external calls?:   27
+- What is the overall line coverage percentage provided by your tests?:  92
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   False
 - Please describe required context:   
-- Does it use an oracle?:  
-- Does the token conform to the ERC20 standard?:  
+- Does it use an oracle?:  No
+- Does the token conform to the ERC20 standard?:  Yes
 - Are there any novel or unique curve logic or mathematical models?: 
 - Does it use a timelock function?:  
 - Is it an NFT?: 
-- Does it have an AMM?:   
-- Is it a fork of a popular project?:   
+- Does it have an AMM?:   Yes
+- Is it a fork of a popular project?:   False
 - Does it use rollups?:   
 - Is it multi-chain?:  
-- Does it use a side-chain?: 
+- Does it use a side-chain?: False
 ```
 
 # Tests
