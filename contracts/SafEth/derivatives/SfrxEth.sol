@@ -5,7 +5,7 @@ import "../../interfaces/IDerivative.sol";
 import "../../interfaces/frax/IsFrxEth.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "../../interfaces/curve/ICrvEthPool1.sol";
+import "../../interfaces/curve/IFrxEthEthPool.sol";
 import "../../interfaces/frax/IFrxETHMinter.sol";
 
 /// @title Derivative contract for sfrxETH
@@ -74,7 +74,7 @@ contract SfrxEth is IDerivative, Initializable, OwnableUpgradeable {
         uint256 minOut = (((ethPerDerivative(_amount) * _amount) / 10 ** 18) *
             (10 ** 18 - maxSlippage)) / 10 ** 18;
 
-        ICrvEthPool1(FRX_ETH_CRV_POOL_ADDRESS).exchange(
+        IFrxEthEthPool(FRX_ETH_CRV_POOL_ADDRESS).exchange(
             1,
             0,
             frxEthBalance,
@@ -113,7 +113,7 @@ contract SfrxEth is IDerivative, Initializable, OwnableUpgradeable {
             10 ** 18
         );
         return ((10 ** 18 * frxAmount) /
-            ICrvEthPool1(FRX_ETH_CRV_POOL_ADDRESS).price_oracle());
+            IFrxEthEthPool(FRX_ETH_CRV_POOL_ADDRESS).price_oracle());
     }
 
     /**

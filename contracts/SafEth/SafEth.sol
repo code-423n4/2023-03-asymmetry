@@ -51,8 +51,8 @@ contract SafEth is
     ) external initializer {
         ERC20Upgradeable.__ERC20_init(_tokenName, _tokenSymbol);
         _transferOwnership(msg.sender);
-        minAmount = 5 ** 18;
-        maxAmount = 200 ** 18;
+        minAmount = 5 * 10 ** 17; // initializing with .5 ETH as minimum
+        maxAmount = 200 * 10 ** 18; // initializing with 200 ETH as maximum
     }
 
     /**
@@ -67,6 +67,7 @@ contract SafEth is
 
         uint256 underlyingValue = 0;
 
+        // Getting underlying value in terms of ETH for each derivative
         for (uint i = 0; i < derivativeCount; i++)
             underlyingValue +=
                 (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
@@ -74,11 +75,12 @@ contract SafEth is
                 10 ** 18;
 
         uint256 totalSupply = totalSupply();
-        uint256 preDepositPrice;
-        if (totalSupply == 0) preDepositPrice = 10 ** 18;
+        uint256 preDepositPrice; // Price of safETH in regards to ETH
+        if (totalSupply == 0)
+            preDepositPrice = 10 ** 18; // initializes with a price of 1
         else preDepositPrice = (10 ** 18 * underlyingValue) / totalSupply;
 
-        uint256 totalStakeValueEth = 0;
+        uint256 totalStakeValueEth = 0; // total amount of derivatives worth of ETH in system
         for (uint i = 0; i < derivativeCount; i++) {
             uint256 weight = weights[i];
             IDerivative derivative = derivatives[i];
@@ -92,7 +94,7 @@ contract SafEth is
             ) * depositAmount) / 10 ** 18;
             totalStakeValueEth += derivativeReceivedEthValue;
         }
-
+        // mintAmount represents a percentage of the total assets in the system
         uint256 mintAmount = (totalStakeValueEth * 10 ** 18) / preDepositPrice;
         _mint(msg.sender, mintAmount);
         emit Staked(msg.sender, msg.value, mintAmount);
@@ -107,10 +109,12 @@ contract SafEth is
         require(pauseUnstaking == false, "unstaking is paused");
         uint256 safEthTotalSupply = totalSupply();
         uint256 ethAmountBefore = address(this).balance;
+
         for (uint256 i = 0; i < derivativeCount; i++) {
+            // withdraw a percentage of each asset based on the amount of safETH
             uint256 derivativeAmount = (derivatives[i].balance() *
                 _safEthAmount) / safEthTotalSupply;
-            if (derivativeAmount == 0) continue;
+            if (derivativeAmount == 0) continue; // if derivative empty ignore
             derivatives[i].withdraw(derivativeAmount);
         }
         _burn(msg.sender, _safEthAmount);
@@ -126,7 +130,10 @@ contract SafEth is
 
     /**
         @notice - Rebalance each derivative to resemble the weight set for it
-        @dev - Depending on the balance of the derivative this could cause max slippage
+        @dev - Withdraws all derivative and re-deposit them to have the correct weights
+        @dev - Depending on the balance of the derivative this could cause bad slippage
+        @dev - If weights are updated then it will slowly change over time to the correct weight distribution
+        @dev - Probably not going to be used often, if at all
     */
     function rebalanceToWeights() external onlyOwner {
         uint256 ethAmountBefore = address(this).balance;
@@ -150,8 +157,8 @@ contract SafEth is
     /**
         @notice - Adds new derivative to the index fund
         @dev - Weights are only in regards to each other, total weight changes with this function
-        @dev - If you want exact weights either do the math off chain or set all derivates to the weights you want
-        @dev - Weights are approximate
+        @dev - If you want exact weights either do the math off chain or reset all existing derivates to the weights you want
+        @dev - Weights are approximate as it will slowly change as people stake
         @param _derivativeIndex - index of the derivative you want to update the weight
         @param _weight - new weight for this derivative.
     */

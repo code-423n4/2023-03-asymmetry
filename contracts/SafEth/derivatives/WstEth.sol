@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import "../../interfaces/IDerivative.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "../../interfaces/curve/ICrvEthPool1.sol";
+import "../../interfaces/curve/IStEthEthPool.sol";
 import "../../interfaces/lido/IWStETH.sol";
 
 /// @title Derivative contract for wstETH
@@ -58,7 +58,7 @@ contract WstEth is IDerivative, Initializable, OwnableUpgradeable {
         uint256 stEthBal = IERC20(STETH_TOKEN).balanceOf(address(this));
         IERC20(STETH_TOKEN).approve(LIDO_CRV_POOL, stEthBal);
         uint256 minOut = (stEthBal * (10 ** 18 - maxSlippage)) / 10 ** 18;
-        ICrvEthPool1(LIDO_CRV_POOL).exchange(1, 0, stEthBal, minOut);
+        IStEthEthPool(LIDO_CRV_POOL).exchange(1, 0, stEthBal, minOut);
         // solhint-disable-next-line
         (bool sent, ) = address(msg.sender).call{value: address(this).balance}(
             ""

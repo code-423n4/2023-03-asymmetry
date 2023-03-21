@@ -6,7 +6,7 @@ import "./IDerivativeMock.sol";
 import "../interfaces/frax/IsFrxEth.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "../interfaces/curve/ICrvEthPool1.sol";
+import "../interfaces/curve/IFrxEthEthPool.sol";
 import "../SafEth/derivatives/SfrxEth.sol";
 
 /// @title Derivative contract for testing contract upgrades
@@ -28,7 +28,12 @@ contract DerivativeMock is SfrxEth {
             FRX_ETH_CRV_POOL_ADDRESS,
             frxEthBalance
         );
-        ICrvEthPool1(FRX_ETH_CRV_POOL_ADDRESS).exchange(1, 0, frxEthBalance, 0);
+        IFrxEthEthPool(FRX_ETH_CRV_POOL_ADDRESS).exchange(
+            1,
+            0,
+            frxEthBalance,
+            0
+        );
         // solhint-disable-next-line
         (bool sent, ) = address(msg.sender).call{value: address(this).balance}(
             ""

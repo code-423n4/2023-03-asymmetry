@@ -133,7 +133,7 @@ All the `mock` contracts are only used for testing purposes
 - How many contracts are in scope?:   4
 - Total SLoC for these contracts?:  645
 - How many external imports are there?:  12
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  12
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  20
 - Does most of your code generally use composition or inheritance?:   inheritance
 - How many external calls?:   27
 - What is the overall line coverage percentage provided by your tests?:  92
