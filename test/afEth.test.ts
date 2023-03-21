@@ -1,21 +1,16 @@
-import { ethers, network } from "hardhat";
+import { ethers, network, waffle } from "hardhat";
 import { CVX_ADDRESS, CVX_WHALE } from "./helpers/constants";
 import ERC20 from "@openzeppelin/contracts/build/contracts/ERC20.json";
 import { time } from "@nomicfoundation/hardhat-network-helpers";
+import { expect } from "chai";
 
-describe.skip("AfEth", async function () {
+describe("AfEth", async function () {
   it("Should trigger withdrawing of vlCVX rewards", async function () {
     const AfEth = await ethers.getContractFactory("AfEth");
-
     // The address params dont matter for this test.
     const address = "0x0000000000000000000000000000000000000000";
     const afEth = await AfEth.deploy(address, address, address, address);
     await afEth.deployed();
-
-    console.log("deployed", afEth.address);
-
-    console.log("block is", await ethers.provider.getBlock("latest"));
-
     // impersonate an account that has rewards to withdraw at the current block
     await network.provider.request({
       method: "hardhat_impersonateAccount",
@@ -28,12 +23,20 @@ describe.skip("AfEth", async function () {
     await cvx.transfer(afEth.address, cvxAmount);
 
     const tx1 = await afEth.lockCvx(cvxAmount);
-    const mined1 = tx1;
-    console.log("mined1 is", mined1);
+    await tx1.wait();
     await time.increase(1000);
 
-    const tx2 = await afEth.claimRewards();
-    const mined2 = await tx2.wait();
-    console.log("mined2 is", mined2);
+    const provider = waffle.provider;
+    const startingBalance = await provider.getBalance(afEth.address);
+
+    const tx2 = await afEth.claimRewards(ethers.utils.parseEther("0.01")); //  1% slippage tolerance when claiming
+    await tx2.wait();
+    const endingBalance = await provider.getBalance(afEth.address);
+
+    expect(endingBalance.gt(startingBalance)).eq(true);
+
+    await expect(
+      afEth.claimRewards(ethers.utils.parseEther("0.0000001")) // very low slippage reverts
+    ).to.be.reverted;
   });
 });

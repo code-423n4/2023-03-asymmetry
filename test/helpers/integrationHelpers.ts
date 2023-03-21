@@ -3,8 +3,8 @@ import { ethers } from "hardhat";
 import { getLatestContract } from "./upgradeHelpers";
 
 let randomSeed = 2;
-export const stakeMinimum = 0.1;
-export const stakeMaximum = 3;
+export const stakeMinimum = 0.5;
+export const stakeMaximum = 5;
 
 export const getAdminAccount = async () => {
   const accounts = await ethers.getSigners();

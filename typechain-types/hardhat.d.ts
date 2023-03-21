@@ -129,6 +129,18 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.AnkrStaker__factory>;
     getContractFactory(
+      name: "IAfEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IAfEthPool__factory>;
+    getContractFactory(
+      name: "IAnkrEthEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IAnkrEthEthPool__factory>;
+    getContractFactory(
+      name: "ICrvEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ICrvEthPool__factory>;
+    getContractFactory(
       name: "ICrvEthPool1",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ICrvEthPool1__factory>;
@@ -136,6 +148,30 @@ declare module "hardhat/types/runtime" {
       name: "ICrvEthPool2",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ICrvEthPool2__factory>;
+    getContractFactory(
+      name: "ICrvEthPoolLegacy",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ICrvEthPoolLegacy__factory>;
+    getContractFactory(
+      name: "ICvxCrvCrvPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ICvxCrvCrvPool__factory>;
+    getContractFactory(
+      name: "ICvxFxsFxsPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ICvxFxsFxsPool__factory>;
+    getContractFactory(
+      name: "IFrxEthEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IFrxEthEthPool__factory>;
+    getContractFactory(
+      name: "IFxsEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IFxsEthPool__factory>;
+    getContractFactory(
+      name: "IStEthEthPool",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IStEthEthPool__factory>;
     getContractFactory(
       name: "IFrxETHMinter",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -407,6 +443,21 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.AnkrStaker>;
     getContractAt(
+      name: "IAfEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IAfEthPool>;
+    getContractAt(
+      name: "IAnkrEthEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IAnkrEthEthPool>;
+    getContractAt(
+      name: "ICrvEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ICrvEthPool>;
+    getContractAt(
       name: "ICrvEthPool1",
       address: string,
       signer?: ethers.Signer
@@ -416,6 +467,36 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ICrvEthPool2>;
+    getContractAt(
+      name: "ICrvEthPoolLegacy",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ICrvEthPoolLegacy>;
+    getContractAt(
+      name: "ICvxCrvCrvPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ICvxCrvCrvPool>;
+    getContractAt(
+      name: "ICvxFxsFxsPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ICvxFxsFxsPool>;
+    getContractAt(
+      name: "IFrxEthEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IFrxEthEthPool>;
+    getContractAt(
+      name: "IFxsEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IFxsEthPool>;
+    getContractAt(
+      name: "IStEthEthPool",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IStEthEthPool>;
     getContractAt(
       name: "IFrxETHMinter",
       address: string,

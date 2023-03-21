@@ -143,90 +143,6 @@
         "IWETH"
       ]
     },
-    "/Users/jakecooley/Projects/smart-contracts/contracts/interfaces/curve/ICrvEthPool1.sol": {
-      "lastModificationDate": 1679415361112,
-      "contentHash": "c4abe2515b26edb65a9adb9f3ce14585",
-      "sourceName": "contracts/interfaces/curve/ICrvEthPool1.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ICrvEthPool1"
-      ]
-    },
-    "/Users/jakecooley/Projects/smart-contracts/contracts/interfaces/curve/ICrvEthPool2.sol": {
-      "lastModificationDate": 1679415361112,
-      "contentHash": "a96feefe9bab224fa427e40c87554802",
-      "sourceName": "contracts/interfaces/curve/ICrvEthPool2.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ICrvEthPool2"
-      ]
-    },
     "/Users/jakecooley/Projects/smart-contracts/contracts/AfEth/interfaces/convex/IClaimZap.sol": {
       "lastModificationDate": 1679415361110,
       "contentHash": "ce78fd80d4ded0ff7354b67976c0b554",
@@ -2889,8 +2805,8 @@
       ]
     },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/SafEth/SafEth.sol": {
-      "lastModificationDate": 1679420339722,
-      "contentHash": "a5fb08280b4aa89837dcf4faed1211e9",
+      "lastModificationDate": 1679433667401,
+      "contentHash": "2f4f83b9561a5c9d4acb2f340e459290",
       "sourceName": "contracts/SafEth/SafEth.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -3682,7 +3598,7 @@
       ]
     },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/mocks/SafEthV2Mock.sol": {
-      "lastModificationDate": 1679420339723,
+      "lastModificationDate": 1679433667403,
       "contentHash": "b2f92f96c435dfc0105caf5a80562109",
       "sourceName": "contracts/mocks/SafEthV2Mock.sol",
       "solcConfig": {
@@ -3771,8 +3687,8 @@
       ]
     },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/SafEth/derivatives/WstEth.sol": {
-      "lastModificationDate": 1679420339720,
-      "contentHash": "203bd0dcb0712415ebb2d307faf5e08f",
+      "lastModificationDate": 1679433667400,
+      "contentHash": "b71b04942b08b17450c0f9a79210468b",
       "sourceName": "contracts/SafEth/derivatives/WstEth.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -3808,7 +3724,7 @@
         "../../interfaces/IDerivative.sol",
         "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../../interfaces/curve/ICrvEthPool1.sol",
+        "../../interfaces/curve/IStEthEthPool.sol",
         "../../interfaces/lido/IWStETH.sol"
       ],
       "versionPragmas": [
@@ -3818,51 +3734,9 @@
         "WstEth"
       ]
     },
-    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICrvEthPool1.sol": {
-      "lastModificationDate": 1679420339737,
-      "contentHash": "c4abe2515b26edb65a9adb9f3ce14585",
-      "sourceName": "contracts/interfaces/curve/ICrvEthPool1.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ICrvEthPool1"
-      ]
-    },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/mocks/DerivativeMock.sol": {
-      "lastModificationDate": 1679420339723,
-      "contentHash": "0034c2b3157f5903534d1e472d2f06e6",
+      "lastModificationDate": 1679433667403,
+      "contentHash": "765bb499a2badde77ab0d767a1bb150a",
       "sourceName": "contracts/mocks/DerivativeMock.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -3900,7 +3774,7 @@
         "../interfaces/frax/IsFrxEth.sol",
         "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../interfaces/curve/ICrvEthPool1.sol",
+        "../interfaces/curve/IFrxEthEthPool.sol",
         "../SafEth/derivatives/SfrxEth.sol"
       ],
       "versionPragmas": [
@@ -3953,8 +3827,8 @@
       ]
     },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/SafEth/derivatives/SfrxEth.sol": {
-      "lastModificationDate": 1679420339720,
-      "contentHash": "cf4ab6f8df40df4e61689ad7b413c9de",
+      "lastModificationDate": 1679433667399,
+      "contentHash": "f56db1d0ce34c42d483536b9791d376e",
       "sourceName": "contracts/SafEth/derivatives/SfrxEth.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -3991,7 +3865,7 @@
         "../../interfaces/frax/IsFrxEth.sol",
         "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../../interfaces/curve/ICrvEthPool1.sol",
+        "../../interfaces/curve/IFrxEthEthPool.sol",
         "../../interfaces/frax/IFrxETHMinter.sol"
       ],
       "versionPragmas": [
@@ -4127,56 +4001,6 @@
       ],
       "artifacts": [
         "IStakewiseStaker"
-      ]
-    },
-    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/SafEth/derivatives/StakeWise.sol": {
-      "lastModificationDate": 1679420339721,
-      "contentHash": "0875b907b9089be6160ce09d86b4ea54",
-      "sourceName": "contracts/SafEth/derivatives/StakeWise.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../../interfaces/IDerivative.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../../interfaces/uniswap/ISwapRouter.sol",
-        "../../interfaces/uniswap/IUniswapV3Pool.sol",
-        "../../interfaces/IWETH.sol",
-        "../../interfaces/stakewise/IStakewiseStaker.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "StakeWise"
       ]
     },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/uniswap/IUniswapV3Pool.sol": {
@@ -4747,55 +4571,6 @@
         "IUniswapV3Factory"
       ]
     },
-    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/SafEth/derivatives/Ankr.sol": {
-      "lastModificationDate": 1679420339721,
-      "contentHash": "d3a22357dbad983e91b11a4248287953",
-      "sourceName": "contracts/SafEth/derivatives/Ankr.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../../interfaces/IDerivative.sol",
-        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
-        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "../../interfaces/ankr/AnkrStaker.sol",
-        "../../interfaces/ankr/AnkrEth.sol",
-        "../../interfaces/curve/ICrvEthPool1.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Ankr"
-      ]
-    },
     "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/ankr/AnkrStaker.sol": {
       "lastModificationDate": 1679420339737,
       "contentHash": "95f25b01bf5f35726156b85e2ec264a1",
@@ -4880,10 +4655,10 @@
         "AnkrEth"
       ]
     },
-    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICrvEthPool2.sol": {
-      "lastModificationDate": 1679420339737,
-      "contentHash": "a96feefe9bab224fa427e40c87554802",
-      "sourceName": "contracts/interfaces/curve/ICrvEthPool2.sol",
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/IStEthEthPool.sol": {
+      "lastModificationDate": 1679433667427,
+      "contentHash": "2b35219de383011e773e0882aad8d208",
+      "sourceName": "contracts/interfaces/curve/IStEthEthPool.sol",
       "solcConfig": {
         "version": "0.8.13",
         "settings": {
@@ -4919,7 +4694,343 @@
         "^0.8.13"
       ],
       "artifacts": [
-        "ICrvEthPool2"
+        "IStEthEthPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/IFrxEthEthPool.sol": {
+      "lastModificationDate": 1679433667428,
+      "contentHash": "94026b7e5edfbd95980fe93d02112654",
+      "sourceName": "contracts/interfaces/curve/IFrxEthEthPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IFrxEthEthPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/IAfEthPool.sol": {
+      "lastModificationDate": 1679433667427,
+      "contentHash": "4f92e7159c4188ecc8a7a2069221de28",
+      "sourceName": "contracts/interfaces/curve/IAfEthPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IAfEthPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/IAnkrEthEthPool.sol": {
+      "lastModificationDate": 1679433667428,
+      "contentHash": "52bb39fb084c45189893fa34505b84df",
+      "sourceName": "contracts/interfaces/curve/IAnkrEthEthPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IAnkrEthEthPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICrvEthPool.sol": {
+      "lastModificationDate": 1679433667426,
+      "contentHash": "e89afb4c6de41d65db75a20ec8ac30cc",
+      "sourceName": "contracts/interfaces/curve/ICrvEthPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ICrvEthPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICrvEthPoolLegacy.sol": {
+      "lastModificationDate": 1679433667426,
+      "contentHash": "8bb762c7f644c269fb804c5f639410ea",
+      "sourceName": "contracts/interfaces/curve/ICrvEthPoolLegacy.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ICrvEthPoolLegacy"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICvxCrvCrvPool.sol": {
+      "lastModificationDate": 1679433667427,
+      "contentHash": "9345a0a9d2aade357d7535e1b81341f6",
+      "sourceName": "contracts/interfaces/curve/ICvxCrvCrvPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ICvxCrvCrvPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/ICvxFxsFxsPool.sol": {
+      "lastModificationDate": 1679433667428,
+      "contentHash": "0318d7af886fcb53b43ff7974770a80c",
+      "sourceName": "contracts/interfaces/curve/ICvxFxsFxsPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ICvxFxsFxsPool"
+      ]
+    },
+    "/Users/jakecooley/Projects/2023-03-asymmetry/contracts/interfaces/curve/IFxsEthPool.sol": {
+      "lastModificationDate": 1679433667428,
+      "contentHash": "1b8d666361e82c08a3066c1b338e43f2",
+      "sourceName": "contracts/interfaces/curve/IFxsEthPool.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IFxsEthPool"
       ]
     }
   }
