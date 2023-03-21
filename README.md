@@ -23,7 +23,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [ ] Add link to submission form in contest details below
 - [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
 - [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
-- [ ] Add sponsor to this private repo with 'maintain' level access.
+- [x] Add sponsor to this private repo with 'maintain' level access.
 - [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
 - [ ] Delete this checklist.
 
