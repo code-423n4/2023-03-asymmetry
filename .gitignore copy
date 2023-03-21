@@ -1,0 +1,17 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+yarn-error.log
+
+#Hardhat files
+cache
+artifacts
+
+#openzeppelin local testnet upgrade addresses
+.openzeppelin/unknown-*.json
+
+# OSX generated
+.DS_Store

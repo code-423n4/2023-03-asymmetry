@@ -1,0 +1,127 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "SafEthStorage",
+  "sourceName": "contracts/SafEth/SafEthStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "derivativeCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "derivatives",
+      "outputs": [
+        {
+          "internalType": "contract IDerivative",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "maxAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "minAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pauseStaking",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pauseUnstaking",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalWeight",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "weights",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506101bd806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063b5f163ff1161005b578063b5f163ff146100dd578063c0046e39146100fd578063cde8f85114610158578063f999c5061461016157600080fd5b80631c4e6ab71461008d5780635f48f393146100b457806396c82e57146100cb5780639b2cb5d8146100d4575b600080fd5b60005461009f90610100900460ff1681565b60405190151581526020015b60405180910390f35b6100bd60045481565b6040519081526020016100ab565b6100bd60025481565b6100bd60035481565b6100bd6100eb36600461016e565b60066020526000908152604090205481565b61013361010b36600461016e565b60056020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100ab565b6100bd60015481565b60005461009f9060ff1681565b60006020828403121561018057600080fd5b503591905056fea264697066735822122052ca4fe93fce70e2388ccdda87436457e98f4f4881463df0468e031ab33a146164736f6c634300080d0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063b5f163ff1161005b578063b5f163ff146100dd578063c0046e39146100fd578063cde8f85114610158578063f999c5061461016157600080fd5b80631c4e6ab71461008d5780635f48f393146100b457806396c82e57146100cb5780639b2cb5d8146100d4575b600080fd5b60005461009f90610100900460ff1681565b60405190151581526020015b60405180910390f35b6100bd60045481565b6040519081526020016100ab565b6100bd60025481565b6100bd60035481565b6100bd6100eb36600461016e565b60066020526000908152604090205481565b61013361010b36600461016e565b60056020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100ab565b6100bd60015481565b60005461009f9060ff1681565b60006020828403121561018057600080fd5b503591905056fea264697066735822122052ca4fe93fce70e2388ccdda87436457e98f4f4881463df0468e031ab33a146164736f6c634300080d0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

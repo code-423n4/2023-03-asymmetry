@@ -1,0 +1,6 @@
+node_modules
+contracts/AsymmetryStrategy
+coverage
+artifacts
+contracts/interfaces/curve/ICrvEthPool1.sol
+contracts/interfaces/curve/ICrvEthPool2.sol

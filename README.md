@@ -31,11 +31,11 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ## ⭐️ Sponsor: Add code to this repo
 
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
+- [x] Create a PR to this repo with the below changes:
+- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
+- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
+- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
+- [x] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
 
 
 ---
@@ -136,3 +136,64 @@ Automated findings output for the contest can be found [here](add link to report
 *Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
 
 *Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+
+# [Asymmetry Finance](https://www.asymmetry.finance/) • ![solidity](https://img.shields.io/badge/solidity-^0.8.13-lightgrey)
+
+## About
+
+SafEth is a smart contract suite that enables a user to diversify their ETH into staked derivatives.
+Currently the supported staked derivatives are [wstETH](https://lido.fi/), [rETH](https://rocketpool.net/), and [sfrxETH](https://docs.frax.finance/frax-ether/frxeth-and-sfrxeth).
+
+The goal of SafEth is to help decentralize the liquid staked derivatives on the Ethereum blockchain. This is done by enabling and easy access to diversification of derivatives.
+
+In the future, SafEth will be used in conjunction with other smart contracts to allow the staking of SafEth to gain higher yield.
+
+## Architecture
+
+[Architecture Diagram](assets/SafEth-Architecture.drawio)
+
+## Local Development
+
+To use the correct node version run
+
+```
+nvm use
+```
+
+To install dependencies and compile run
+
+```
+yarn && yarn compile
+```
+
+## Testing
+
+### Hardhat
+
+For testing on hardhat simply run:
+
+```
+yarn test
+```
+
+Or for complete coverage:
+
+```
+yarn coverage
+```
+
+### Local Node
+
+Run the following command to spin up your local node
+
+```
+yarn local:node
+```
+
+In another terminal run this command to deploy the contracts to your local node
+
+```
+yarn deploy --network localhost
+```
+
+Once deployed you can interact with your local contracts through Ethernal or scripts/tests
