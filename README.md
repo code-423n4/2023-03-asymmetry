@@ -1,67 +1,3 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos:
-
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted (shared with you after the contest)
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-# Contest setup
-
-## 🐺 C4: Set up repos
-
-- [x] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [x] Rename this repo to reflect contest date (if applicable)
-- [x] Rename contest H1 below
-- [x] Update pot sizes
-- [x] Fill in start and end times in contest bullets below
-- [x] Add link to submission form in contest details below
-- [x] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
-- [x] Add sponsor to this private repo with 'maintain' level access.
-- [x] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here.
-- [ ] Delete this checklist.
-
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [x] Create a PR to this repo with the below changes:
-- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [x] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [x] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [x] When linking, please provide all links as full absolute links versus relative links
-  - [x] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [x] Under the "Scope" heading, provide the name of each contract and:
-  - [x] source lines of code (excluding blank lines and comments) in each
-  - [x] external contracts called in each
-  - [x] libraries used in each
-- [x] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [x] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [x] Describe anything else that adds any special logic that makes your approach unique
-- [x] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # Asymmetry contest details
 
 - Total Prize Pool: $36,500
@@ -85,18 +21,18 @@ _Note for C4 wardens: Anything included in the automated findings output is cons
 
 # Overview
 
-SafEth is a smart contract suite that enables a user to diversify their ETH into staked derivatives.
+SafEth is a smart contract suite developed by [Asymmetry Finance](https://www.asymmetry.finance/) that enables a user to diversify their ETH into staked derivatives.
 Currently the supported staked derivatives are [wstETH](https://lido.fi/), [rETH](https://rocketpool.net/), and [sfrxETH](https://docs.frax.finance/frax-ether/frxeth-and-sfrxeth).
 
 The goal of SafEth is to help decentralize the liquid staked derivatives on the Ethereum blockchain. This is done by enabling and easy access to diversification of derivatives.
 
 In the future, SafEth will be used in conjunction with other smart contracts to allow the staking of SafEth to gain higher yield.
 
-[Architecture Diagram](assets/SafEth-Architecture.drawio)
+[Architecture Diagram](https://github.com/code-423n4/2023-03-asymmetry/tree/main/assets/SafEth-Architecture.drawio)
 
 ## Protocol Contracts:
 
-[SafEth](contracts/SafEth/SafEth.sol): An upgradeable ERC20 contract that handles the conversion between ETH and whatever derivatives that are implemented
+[SafEth](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/SafEth.sol): An upgradeable ERC20 contract that handles the conversion between ETH and whatever derivatives that are implemented
 
 ## Derivative Contracts:
 
@@ -106,18 +42,74 @@ In the future, SafEth will be used in conjunction with other smart contracts to 
 
 These contracts handle all business logic to deposit and withdraw through their specific protocols. These will change after Shanghai is released when withdrawing from the beacon chain is enabled
 
-# Scope
+## Scope
 
-| Contract                                                                                                                                       | SLOC | Purpose                                              | Libraries used                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ---------------------------------------------------- | -------------------------------------------------------- |
-| [contracts/SafEth/SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/SafEth.sol)                           | 224  | This contract is the main staking/unstaking contract | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [contracts/SafEth/derivatives/Reth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/derivatives/Reth.sol)       | 222  | Derivative contract for rETH                         | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [contracts/SafEth/derivatives/SfrxEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/derivatives/SfrxEth.sol) | 113  | Derivative contract for sfrxETH                      | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
-| [contracts/SafEth/derivatives/WstEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/derivatives/WstEth.sol)   | 86   | Derivative contract for wstETH                       | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+### Files in scope
 
-## Out of scope
+| File                                                                                                                                                                                                             |      [SLOC](#nowhere "(nSLOC, SLOC, Lines)")       | Description and [Coverage](#nowhere "(Lines hit / Total)")                                                  | Libraries                                                |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------: | :---------------------------------------------------------------------------------------------------------- | :------------------------------------------------------- |
+| _Contracts (4)_                                                                                                                                                                                                  |
+| [contracts/SafEth/derivatives/WstEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/WstEth.sol) [💰](#nowhere "Payable Functions")                                  |   [54](#nowhere "(nSLOC:54, SLOC:54, Lines:98)")   | Derivative contract for wstETH, &nbsp;&nbsp;[95.00%](#nowhere "(Hit:19 / Total:20)")                        | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/SafEth/derivatives/SfrxEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/SfrxEth.sol) [💰](#nowhere "Payable Functions")                                |  [81](#nowhere "(nSLOC:81, SLOC:81, Lines:127)")   | Derivative contract for sfrxETH, &nbsp;&nbsp;[95.00%](#nowhere "(Hit:19 / Total:20)")                       | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/SafEth/SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/SafEth.sol) [💰](#nowhere "Payable Functions")                                                          | [156](#nowhere "(nSLOC:144, SLOC:156, Lines:247)") | This contract is the main staking/unstaking contract, &nbsp;&nbsp;[100.00%](#nowhere "(Hit:74 / Total:74)") | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/SafEth/derivatives/Reth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/Reth.sol) [💰](#nowhere "Payable Functions") [🧮](#nowhere "Uses Hash-Functions") | [169](#nowhere "(nSLOC:163, SLOC:169, Lines:245)") | Derivative contract for rETH, &nbsp;&nbsp;[97.56%](#nowhere "(Hit:40 / Total:41)")                          | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| Total (over 4 files):                                                                                                                                                                                            | [460](#nowhere "(nSLOC:442, SLOC:460, Lines:717)") | [98.06%](#nowhere "Hit:152 / Total:155")                                                                    |
 
-All the `mock` contracts are only used for testing purposes
+### All other source contracts (not in scope)
+
+| File                                                                                                                                                                                                                          |       [SLOC](#nowhere "(nSLOC, SLOC, Lines)")       | Description and [Coverage](#nowhere "(Lines hit / Total)") | Libraries                                                |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------: | :--------------------------------------------------------- | :------------------------------------------------------- |
+| _Contracts (1)_                                                                                                                                                                                                               |
+| [contracts/SafEth/SafEthStorage.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/SafEthStorage.sol)                                                                                            |   [12](#nowhere "(nSLOC:12, SLOC:12, Lines:24)")    | -                                                          |                                                          |
+| _Abstracts (2)_                                                                                                                                                                                                               |
+| [contracts/interfaces/lido/IstETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/lido/IstETH.sol)                                                                                        |     [5](#nowhere "(nSLOC:5, SLOC:5, Lines:8)")      | -                                                          | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/interfaces/lido/IWStETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/lido/IWStETH.sol)                                                                                      |    [12](#nowhere "(nSLOC:8, SLOC:12, Lines:18)")    | -                                                          | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| _Interfaces (29)_                                                                                                                                                                                                             |
+| [contracts/interfaces/IWETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/IWETH.sol) [💰](#nowhere "Payable Functions")                                                                 |     [6](#nowhere "(nSLOC:6, SLOC:6, Lines:10)")     | -                                                          | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/interfaces/frax/IFrxETHMinter.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/frax/IFrxETHMinter.sol) [💰](#nowhere "Payable Functions")                                       |     [6](#nowhere "(nSLOC:4, SLOC:6, Lines:10)")     | -                                                          |                                                          |
+| [contracts/interfaces/IDerivative.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/IDerivative.sol) [💰](#nowhere "Payable Functions")                                                     |     [9](#nowhere "(nSLOC:9, SLOC:9, Lines:22)")     | -                                                          |                                                          |
+| [contracts/interfaces/curve/IStEthEthPool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/IStEthEthPool.sol) [💰](#nowhere "Payable Functions")                                     |     [9](#nowhere "(nSLOC:4, SLOC:9, Lines:12)")     | -                                                          |                                                          |
+| [contracts/interfaces/rocketpool/RocketDAOProtocolSettingsDepositInterface.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/rocketpool/RocketDAOProtocolSettingsDepositInterface.sol)      |     [9](#nowhere "(nSLOC:9, SLOC:9, Lines:16)")     | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolImmutables.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolImmutables.sol)                                    |     [9](#nowhere "(nSLOC:9, SLOC:9, Lines:35)")     | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolOwnerActions.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolOwnerActions.sol)                                |     [9](#nowhere "(nSLOC:5, SLOC:9, Lines:23)")     | -                                                          |                                                          |
+| [contracts/interfaces/curve/IFrxEthEthPool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/IFrxEthEthPool.sol) [💰](#nowhere "Payable Functions")                                   |    [10](#nowhere "(nSLOC:5, SLOC:10, Lines:14)")    | -                                                          |                                                          |
+| [contracts/interfaces/frax/IsFrxEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/frax/IsFrxEth.sol) [💰](#nowhere "Payable Functions")                                                 |    [11](#nowhere "(nSLOC:7, SLOC:11, Lines:18)")    | -                                                          |                                                          |
+| [contracts/interfaces/rocketpool/RocketDepositPoolInterface.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/rocketpool/RocketDepositPoolInterface.sol) [💰](#nowhere "Payable Functions") |   [11](#nowhere "(nSLOC:11, SLOC:11, Lines:20)")    | -                                                          |                                                          |
+| [contracts/interfaces/curve/IAfEthPool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/IAfEthPool.sol) [💰](#nowhere "Payable Functions")                                           |    [12](#nowhere "(nSLOC:5, SLOC:12, Lines:16)")    | -                                                          |                                                          |
+| [contracts/interfaces/rocketpool/RocketTokenRETHInterface.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/rocketpool/RocketTokenRETHInterface.sol) [💰](#nowhere "Payable Functions")     |   [13](#nowhere "(nSLOC:13, SLOC:13, Lines:24)")    | -                                                          | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [contracts/interfaces/uniswap/ISwapRouter.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/ISwapRouter.sol) [💰](#nowhere "Payable Functions")                                     |   [15](#nowhere "(nSLOC:13, SLOC:15, Lines:21)")    | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/IUniswapV3Pool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/IUniswapV3Pool.sol)                                                                  |   [16](#nowhere "(nSLOC:16, SLOC:16, Lines:24)")    | -                                                          |                                                          |
+| [contracts/interfaces/curve/ICrvEthPool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/ICrvEthPool.sol) [💰](#nowhere "Payable Functions")                                         |    [22](#nowhere "(nSLOC:8, SLOC:22, Lines:29)")    | -                                                          |                                                          |
+| [contracts/interfaces/curve/IFxsEthPool.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/IFxsEthPool.sol) [💰](#nowhere "Payable Functions")                                         |    [22](#nowhere "(nSLOC:8, SLOC:22, Lines:29)")    | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolDerivedState.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolDerivedState.sol)                                |    [23](#nowhere "(nSLOC:5, SLOC:23, Lines:48)")    | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/IUniswapV3Factory.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/IUniswapV3Factory.sol)                                                            |   [26](#nowhere "(nSLOC:18, SLOC:26, Lines:78)")    | -                                                          |                                                          |
+| [contracts/interfaces/curve/ICrvEthPoolLegacy.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/curve/ICrvEthPoolLegacy.sol) [💰](#nowhere "Payable Functions")                             |   [32](#nowhere "(nSLOC:11, SLOC:32, Lines:41)")    | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolActions.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolActions.sol)                                          |   [39](#nowhere "(nSLOC:10, SLOC:39, Lines:105)")   | -                                                          |                                                          |
+| [contracts/interfaces/rocketpool/RocketStorageInterface.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/rocketpool/RocketStorageInterface.sol)                                            |   [42](#nowhere "(nSLOC:34, SLOC:42, Lines:81)")    | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolState.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolState.sol)                                              |   [61](#nowhere "(nSLOC:12, SLOC:61, Lines:125)")   | -                                                          |                                                          |
+| [contracts/interfaces/uniswap/pool/IUniswapV3PoolEvents.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/uniswap/pool/IUniswapV3PoolEvents.sol)                                            |   [62](#nowhere "(nSLOC:62, SLOC:62, Lines:131)")   | -                                                          |                                                          |
+| Total (over 32 files):                                                                                                                                                                                                        | [564](#nowhere "(nSLOC:342, SLOC:564, Lines:1071)") | -                                                          |
+
+## External imports
+
+- **@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol**
+  - [contracts/SafEth/SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/SafEth.sol)
+  - [contracts/SafEth/derivatives/Reth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/Reth.sol)
+  - [contracts/SafEth/derivatives/SfrxEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/SfrxEth.sol)
+  - [contracts/SafEth/derivatives/WstEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/WstEth.sol)
+- **@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol**
+  - [contracts/SafEth/SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/SafEth.sol)
+- **@openzeppelin/contracts/token/ERC20/ERC20.sol**
+  - ~~[contracts/interfaces/lido/IWStETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/lido/IWStETH.sol)~~
+  - ~~[contracts/interfaces/lido/IstETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/lido/IstETH.sol)~~
+- **@openzeppelin/contracts/token/ERC20/IERC20.sol**
+  - [contracts/SafEth/SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/SafEth.sol)
+  - [contracts/SafEth/derivatives/Reth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/Reth.sol)
+  - [contracts/SafEth/derivatives/SfrxEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/SfrxEth.sol)
+  - [contracts/SafEth/derivatives/WstEth.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/WstEth.sol)
+  - ~~[contracts/interfaces/IWETH.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/IWETH.sol)~~
+  - ~~[contracts/interfaces/rocketpool/RocketTokenRETHInterface.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/rocketpool/RocketTokenRETHInterface.sol)~~
+  - ~~[contracts/interfaces/stakewise/IStakewiseStaker.sol](https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/interfaces/stakewise/IStakewiseStaker.sol)~~
 
 # Additional Context
 
@@ -151,6 +143,14 @@ All the `mock` contracts are only used for testing purposes
 - Does it use a side-chain?: False
 ```
 
+# Quickstart Command
+
+To immediately get started run the following command
+
+```
+export FORK_URL="<your-mainnet-url-goes-here>" && rm -Rf 2023-03-asymmetry || true && git clone https://github.com/code-423n4/2023-03-asymmetry.git -j8 && cd 2023-03-asymmetry && cat .env.sample | sed -e 's|MAINNET_URL=|MAINNET_URL="'"$FORK_URL"'"|g' > .env && nvm use && yarn && yarn compile && REPORT_GAS=true yarn test
+```
+
 # Tests
 
 ## Local Development
@@ -161,11 +161,11 @@ To use the correct node version run
 nvm use
 ```
 
-To install dependencies and compile run
+To install dependencies:
 
-```
-yarn && yarn compile
-```
+First copy the `.env.sample` to a file called `.env` and add an [Alchemy Node URL](https://www.alchemy.com/) under the variable `MAINNET_URL`
+
+Next run `yarn` to install dependencies and run `yarn compile` to compile the project.
 
 ## Hardhat
 
