@@ -28,7 +28,11 @@ The goal of SafEth is to help decentralize the liquid staked derivatives on the 
 
 In the future, SafEth will be used in conjunction with other smart contracts to allow the staking of SafEth to gain higher yield.
 
-[Architecture Diagram](https://github.com/code-423n4/2023-03-asymmetry/tree/main/assets/SafEth-Architecture.drawio)
+![Architecture Diagram](https://github.com/code-423n4/2023-03-asymmetry/tree/main/assets/SafEth-Architecture.png)
+
+There are two main functions a user will interact with and they both reside in [SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/SafEth.sol)
+- `stake`: The main entry-point to the protocol.  Will take the users `ETH` and convert it into various derivatives based on their weights and mint an amount of `safETH` that represents a percentage of the total assets in the system.
+- `unstake`: The main exit-point from the protocol.  Will burn the users `safETH` and convert a percentage of each derivative to give the user their ETH back including any of the rewards their derivatives have accrued over the time since they started staking.
 
 ## Protocol Contracts:
 
