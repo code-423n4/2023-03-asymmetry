@@ -29,9 +29,9 @@ The goal of SafEth is to help decentralize the liquid staked derivatives on the 
 
 In the future, SafEth will be used in conjunction with other smart contracts to allow the staking of SafEth to gain higher yield.
 
-
+<center>
 ![image](https://user-images.githubusercontent.com/11018468/227099513-cf9ce9cd-083e-41fd-adab-49373f122e42.png)
-
+</center>
 
 
 There are two main functions a user will interact with and they both reside in [SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/SafEth.sol)
