@@ -1,17 +1,18 @@
 # Asymmetry contest details
 
-- Total Prize Pool: $36,500
-  - HM awards: $25,500
-  - QA report awards: #3,000
-  - Gas report awards: $1,500
-  - Judge + presort awards: $6,000
+- Total Prize Pool: $49,200 USDC
+  - HM awards: $25,500 USDC 
+  - QA report awards: #3,000 USDC
+  - Gas report awards: $1,500 USDC 
+  - Presort awards: $2,400 USDC
+  - Judge awards: $6,300 USDC
   - Scout awards: $500 USDC
   - Mitigation review contest: $10,000 (_Opportunity goes to top X certified wardens based on placement in this contest._)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-03-asymmetry-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts 24 March 2023 20:00 UTC
-- Ends 30 March 2023 20:00 UTC
+- Starts March 24, 2023 20:00 UTC
+- Ends March 30, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
@@ -28,7 +29,8 @@ The goal of SafEth is to help decentralize the liquid staked derivatives on the 
 
 In the future, SafEth will be used in conjunction with other smart contracts to allow the staking of SafEth to gain higher yield.
 
-![Architecture Diagram](https://github.com/code-423n4/2023-03-asymmetry/tree/main/assets/SafEth-Architecture.png)
+![Architecture Diagram][SafEth-Architecture](https://user-images.githubusercontent.com/11018468/227068324-449d97b1-87dd-4cab-a355-e311b5e7be8e.png)
+
 
 There are two main functions a user will interact with and they both reside in [SafEth.sol](https://github.com/code-423n4/2023-03-asymmetry/tree/main/contracts/SafEth/SafEth.sol)
 - `stake`: The main entry-point to the protocol.  Will take the users `ETH` and convert it into various derivatives based on their weights and mint an amount of `safETH` that represents a percentage of the total assets in the system.
