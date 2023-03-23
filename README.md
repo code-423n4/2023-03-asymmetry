@@ -118,7 +118,7 @@ These contracts handle all business logic to deposit and withdraw through their 
 # Additional Context
 
 - Minting safETH is done as a percentage of the entire value of the system. If you put in 10% of the ETH in the system, you will own 10% of the safETH.
-- Weights are set for each derivative dynamically and will stake at a percentage to whatever the current weight is set to.
+- Weights are set for each derivative and will stake at a percentage to whatever the current weight is set to.
 - Weights are not set in percentage out of 100, so if you set derivatives weights to 400, 400, and 200 they will be 40%, 40%, and 20% respectively.
 - A lot of protocols haven't implemented withdrawing yet, so the derivative contracts will be upgraded after Shanghai
 
@@ -137,13 +137,13 @@ These contracts handle all business logic to deposit and withdraw through their 
 - Please describe required context:
 - Does it use an oracle?:  No
 - Does the token conform to the ERC20 standard?:  Yes
-- Are there any novel or unique curve logic or mathematical models?:
-- Does it use a timelock function?:
-- Is it an NFT?:
+- Are there any novel or unique curve logic or mathematical models?: Yes
+- Does it use a timelock function?: No
+- Is it an NFT?: No
 - Does it have an AMM?:   Yes
 - Is it a fork of a popular project?:   False
-- Does it use rollups?:
-- Is it multi-chain?:
+- Does it use rollups?: No
+- Is it multi-chain?: No
 - Does it use a side-chain?: False
 ```
 
@@ -190,7 +190,7 @@ yarn coverage
 Run the following command to spin up your local node
 
 ```
-yarn local:node
+yarn local-node
 ```
 
 In another terminal run this command to deploy the contracts to your local node
