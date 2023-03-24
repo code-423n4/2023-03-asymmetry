@@ -1,13 +1,13 @@
-# Asymmetry contest details
+# Asymmetry Finance contest details
 
 - Total Prize Pool: $49,200 USDC
   - HM awards: $25,500 USDC 
-  - QA report awards: #3,000 USDC
+  - QA report awards: $3,000 USDC
   - Gas report awards: $1,500 USDC 
-  - Presort awards: $2,400 USDC
+  - Lookout awards: $2,400 USDC
   - Judge awards: $6,300 USDC
   - Scout awards: $500 USDC
-  - Mitigation review contest: $10,000 (_Opportunity goes to top X certified wardens based on placement in this contest._)
+  - Mitigation review contest: $10,000 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-03-asymmetry-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
