@@ -16,7 +16,7 @@
 
 ## Automated Findings / Publicly Known Issues
 
-Automated findings output for the contest can be found [here](add link to report) within an hour of contest opening.
+Automated findings output for the contest can be found [here](https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4).
 
 _Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards._
 
