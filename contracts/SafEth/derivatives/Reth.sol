@@ -41,8 +41,8 @@ contract Reth is IDerivative, Initializable, OwnableUpgradeable {
     */
     function initialize(address _owner) external initializer {
         _transferOwnership(_owner);
-        maxSlippage = (1 * 10 ** 16); // 1%
-    }
+   uint256 constant private MAX_SLIPPAGE = 10000; // 1% represented as parts per million (PPM)
+    uint256 private maxSlippage = MAX_SLIPPAGE;
 
     /**
         @notice - Return derivative name
@@ -63,14 +63,13 @@ contract Reth is IDerivative, Initializable, OwnableUpgradeable {
         @notice - Get rETH address
         @dev - per RocketPool Docs query addresses each time it is used
      */
-    function rethAddress() private view returns (address) {
-        return
-            RocketStorageInterface(ROCKET_STORAGE_ADDRESS).getAddress(
-                keccak256(
-                    abi.encodePacked("contract.address", "rocketTokenRETH")
-                )
-            );
-    }
+   function rethAddress() private view returns (address) {
+    address storageAddress = RocketStorageInterface(ROCKET_STORAGE_ADDRESS).getAddress(keccak256(abi.encodePacked("contract.address", "rocketTokenRETH")));
+    require(storageAddress != address(0), "RETH address not set in storage");
+    require(Address.isContract(storageAddress), "RETH address is not a contract");
+    return storageAddress;
+}
+
 
     /**
         @notice - Swap tokens through Uniswap
@@ -80,26 +79,45 @@ contract Reth is IDerivative, Initializable, OwnableUpgradeable {
         @param _amountIn - amount of token to swap from
         @param _minOut - minimum amount of token to receive (slippage)
      */
-    function swapExactInputSingleHop(
-        address _tokenIn,
-        address _tokenOut,
-        uint24 _poolFee,
-        uint256 _amountIn,
-        uint256 _minOut
-    ) private returns (uint256 amountOut) {
-        IERC20(_tokenIn).approve(UNISWAP_ROUTER, _amountIn);
-        ISwapRouter.ExactInputSingleParams memory params = ISwapRouter
-            .ExactInputSingleParams({
-                tokenIn: _tokenIn,
-                tokenOut: _tokenOut,
-                fee: _poolFee,
-                recipient: address(this),
-                amountIn: _amountIn,
-                amountOutMinimum: _minOut,
-                sqrtPriceLimitX96: 0
-            });
-        amountOut = ISwapRouter(UNISWAP_ROUTER).exactInputSingle(params);
-    }
+   function swapExactInputSingleHop(
+    address _tokenIn,
+    address _tokenOut,
+    uint24 _poolFee,
+    uint256 _amountIn,
+    uint256 _minOut
+   ) private returns (uint256 amountOut) {
+    require(_tokenIn != address(0), "Invalid input token address");
+    require(_tokenOut != address(0), "Invalid output token address");
+
+       require(IERC20(_tokenIn).totalSupply() > 0, "Invalid input token");
+       require(IERC20(_tokenOut).totalSupply() > 0, "Invalid output token");
+
+    require(_amountIn > 0, "Amount in must be greater than zero");
+    require(_minOut > 0, "Minimum output must be greater than zero");
+
+    IERC20(_tokenIn).approve(UNISWAP_ROUTER, _amountIn);
+
+    ISwapRouter.ExactInputSingleParams memory params = ISwapRouter
+        .ExactInputSingleParams({
+            tokenIn: _tokenIn,
+            tokenOut: _tokenOut,
+            fee: _poolFee,
+            recipient: address(this),
+            amountIn: _amountIn,
+            amountOutMinimum: _minOut,
+            sqrtPriceLimitX96: 0
+        });
+
+    uint256 balanceBefore = IERC20(_tokenOut).balanceOf(address(this));
+
+    amountOut = ISwapRouter(UNISWAP_ROUTER).exactInputSingle(params);
+
+    require(
+        IERC20(_tokenOut).balanceOf(address(this)) - balanceBefore >= _minOut,
+        "Received less than minimum output"
+    );
+}
+
 
     /**
         @notice - Convert derivative into ETH
@@ -117,17 +135,30 @@ contract Reth is IDerivative, Initializable, OwnableUpgradeable {
         @notice - Check whether or not rETH deposit pool has room users amount
         @param _amount - amount that will be deposited
      */
-    function poolCanDeposit(uint256 _amount) private view returns (bool) {
-        address rocketDepositPoolAddress = RocketStorageInterface(
-            ROCKET_STORAGE_ADDRESS
-        ).getAddress(
-                keccak256(
-                    abi.encodePacked("contract.address", "rocketDepositPool")
-                )
-            );
-        RocketDepositPoolInterface rocketDepositPool = RocketDepositPoolInterface(
-                rocketDepositPoolAddress
-            );
+function poolCanDeposit(uint256 _amount) private view returns (bool) {
+    address rocketDepositPoolAddress = RocketStorageInterface(
+        ROCKET_STORAGE_ADDRESS
+    ).getAddress(
+        keccak256(
+            abi.encodePacked("contract.address", "rocketDepositPool")
+        )
+    );
+    RocketDepositPoolInterface rocketDepositPool = RocketDepositPoolInterface(
+        rocketDepositPoolAddress
+    );
+    
+    uint256 availableSpace = rocketDepositPool.availableSpace();
+    
+    return _amount <= availableSpace;
+}
+
+    
+    try RocketDepositPoolInterface(rocketDepositPoolAddress).getMaxDepositAmount() returns (uint256 maxDeposit) {
+        return maxDeposit >= _amount;
+    } catch {
+        return false;
+    }
+}
 
         address rocketProtocolSettingsAddress = RocketStorageInterface(
             ROCKET_STORAGE_ADDRESS
