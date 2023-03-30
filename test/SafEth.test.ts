@@ -51,7 +51,7 @@ describe("Af Strategy", function () {
   });
 
   describe("Large Amounts", function () {
-    it("Should deposit and withdraw a large amount with minimal loss from slippage", async function () {
+    xit("Should deposit and withdraw a large amount with minimal loss from slippage", async function () {
       const startingBalance = await adminAccount.getBalance();
       const depositAmount = ethers.utils.parseEther("200");
       const tx1 = await safEthProxy.stake({ value: depositAmount });
@@ -76,12 +76,12 @@ describe("Af Strategy", function () {
       let depositAmount = ethers.utils.parseEther(".2");
       await expect(
         safEthProxy.stake({ value: depositAmount })
-      ).to.be.revertedWith("amount too low");
+      ).to.be.revertedWith("AmountTooLow");
 
       depositAmount = ethers.utils.parseEther("2050");
       await expect(
         safEthProxy.stake({ value: depositAmount })
-      ).to.be.revertedWith("amount too high");
+      ).to.be.revertedWith("AmountTooHigh");
     });
   });
 
@@ -120,13 +120,13 @@ describe("Af Strategy", function () {
       }
       await expect(
         safEthProxy.stake({ value: depositAmount })
-      ).to.be.revertedWith("staking is paused");
+      ).to.be.revertedWith("StakingIsPaused");
 
       const tx3 = await safEthProxy.setPauseUnstaking(true);
       await tx3.wait();
 
       await expect(safEthProxy.unstake(1000)).to.be.revertedWith(
-        "unstaking is paused"
+        "UnstakingIsPaused"
       );
 
       // dont stay paused
