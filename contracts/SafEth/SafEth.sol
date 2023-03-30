@@ -51,8 +51,8 @@ contract SafEth is
     ) external initializer {
         ERC20Upgradeable.__ERC20_init(_tokenName, _tokenSymbol);
         _transferOwnership(msg.sender);
-        minAmount = 5 * 10 ** 17; // initializing with .5 ETH as minimum
-        maxAmount = 200 * 10 ** 18; // initializing with 200 ETH as maximum
+        minAmount = 0.5 ether; // initializing with .5 ETH as minimum
+        maxAmount = 200 ether; // initializing with 200 ETH as maximum
     }
 
     /**
@@ -82,7 +82,7 @@ contract SafEth is
             underlyingValue +=
                 (derivative.ethPerDerivative(derivative.balance()) *
                     derivative.balance()) /
-                10 ** 18;
+                1 ether;
 
             unchecked {
                 i++;
@@ -92,8 +92,8 @@ contract SafEth is
         uint256 totalSupply = totalSupply();
         uint256 preDepositPrice; // Price of safETH in regards to ETH
         if (totalSupply == 0)
-            preDepositPrice = 10 ** 18; // initializes with a price of 1
-        else preDepositPrice = (10 ** 18 * underlyingValue) / totalSupply;
+            preDepositPrice = 1 ether; // initializes with a price of 1
+        else preDepositPrice = (1 ether * underlyingValue) / totalSupply;
 
         uint256 totalStakeValueEth = 0; // total amount of derivatives worth of ETH in system
         for (uint i = 0; i < derivativeCount; i++) {
@@ -106,11 +106,11 @@ contract SafEth is
             uint256 depositAmount = derivative.deposit{value: ethAmount}();
             uint derivativeReceivedEthValue = (derivative.ethPerDerivative(
                 depositAmount
-            ) * depositAmount) / 10 ** 18;
+            ) * depositAmount) / 1 ether;
             totalStakeValueEth += derivativeReceivedEthValue;
         }
         // mintAmount represents a percentage of the total assets in the system
-        uint256 mintAmount = (totalStakeValueEth * 10 ** 18) / preDepositPrice;
+        uint256 mintAmount = (totalStakeValueEth * 1 ether) / preDepositPrice;
         _mint(msg.sender, mintAmount);
         emit Staked(msg.sender, msg.value, mintAmount);
     }
