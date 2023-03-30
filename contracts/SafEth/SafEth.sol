@@ -78,16 +78,16 @@ contract SafEth is
 
         // Getting underlying value in terms of ETH for each derivative
         for (uint i = 0; i < derivativeCount;){
+            IDerivative derivative = derivatives[i];
             underlyingValue +=
-                (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
-                    derivatives[i].balance()) /
+                (derivative.ethPerDerivative(derivative.balance()) *
+                    derivative.balance()) /
                 10 ** 18;
 
             unchecked {
                 i++;
             }
         }
-
 
         uint256 totalSupply = totalSupply();
         uint256 preDepositPrice; // Price of safETH in regards to ETH
@@ -131,11 +131,12 @@ contract SafEth is
         uint256 ethAmountBefore = address(this).balance;
 
         for (uint256 i = 0; i < derivativeCount; i++) {
+            IDerivative derivative = derivatives[i];
             // withdraw a percentage of each asset based on the amount of safETH
-            uint256 derivativeAmount = (derivatives[i].balance() *
+            uint256 derivativeAmount = (derivative.balance() *
                 _safEthAmount) / safEthTotalSupply;
             if (derivativeAmount == 0) continue; // if derivative empty ignore
-            derivatives[i].withdraw(derivativeAmount);
+            derivative.withdraw(derivativeAmount);
         }
         _burn(msg.sender, _safEthAmount);
         uint256 ethAmountAfter = address(this).balance;
@@ -159,8 +160,9 @@ contract SafEth is
     function rebalanceToWeights() external onlyOwner {
         uint256 ethAmountBefore = address(this).balance;
         for (uint i = 0; i < derivativeCount; i++) {
-            if (derivatives[i].balance() > 0)
-                derivatives[i].withdraw(derivatives[i].balance());
+            IDerivative derivative = derivatives[i];
+            if (derivative.balance() > 0)
+                derivative.withdraw(derivative.balance());
         }
         uint256 ethAmountAfter = address(this).balance;
         uint256 ethAmountToRebalance = ethAmountAfter - ethAmountBefore;
