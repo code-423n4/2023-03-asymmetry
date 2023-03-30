@@ -19,6 +19,6 @@ contract SafEthStorage {
     uint256 public totalWeight; // total weight of all derivatives (used to calculate percentage of derivative)
     uint256 public minAmount; // minimum amount to stake
     uint256 public maxAmount; // maximum amount to stake
-    mapping(uint256 => IDerivative) public derivatives; // derivatives in the system
+    mapping(uint256 => IDerivative) public derivatives; // derivatives in the system @note ho IDerivative works
     mapping(uint256 => uint256) public weights; // weights for each derivative
 }

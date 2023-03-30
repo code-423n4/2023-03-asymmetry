@@ -10,6 +10,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "./SafEthStorage.sol";
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 
+// @audit-ok - irregular NatSpec
 /// @title Contract that mints/burns and provides owner functions for safETH
 /// @author Asymmetry Finance
 contract SafEth is
@@ -17,7 +18,7 @@ contract SafEth is
     ERC20Upgradeable,
     OwnableUpgradeable,
     SafEthStorage
-{
+{ 
     event ChangeMinAmount(uint256 indexed minAmount);
     event ChangeMaxAmount(uint256 indexed maxAmount);
     event StakingPaused(bool indexed paused);
@@ -31,7 +32,8 @@ contract SafEth is
         uint weight,
         uint index
     );
-    event Rebalanced();
+    // @note Why this event does not have params ?
+    event Rebalanced(); 
 
     // As recommended by https://docs.openzeppelin.com/upgrades-plugins/1.x/writing-upgradeable
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -46,42 +48,65 @@ contract SafEth is
         @param _tokenSymbol - symbol of erc20
     */
     function initialize(
-        string memory _tokenName,
-        string memory _tokenSymbol
+        string calldata _tokenName,
+        string calldata _tokenSymbol
     ) external initializer {
         ERC20Upgradeable.__ERC20_init(_tokenName, _tokenSymbol);
         _transferOwnership(msg.sender);
-        minAmount = 5 * 10 ** 17; // initializing with .5 ETH as minimum
-        maxAmount = 200 * 10 ** 18; // initializing with 200 ETH as maximum
+        // @audit-ok user ether keyword to be more readable
+        minAmount = 0.5 ether; // initializing with .5 ETH as minimum
+        maxAmount = 200 ether; // initializing with 200 ETH as maximum
     }
 
+
+    /** 
+     * @audit-ok gas cost before = avg 527253 
+     *           gas cost after  = avg 525742 
+     *           deploy cost after = 2353067 
+     *           deploy cost after = 2301828
+     * */      
     /**
         @notice - Stake your ETH into safETH
         @dev - Deposits into each derivative based on its weight
         @dev - Mints safEth in a redeemable value which equals to the correct percentage of the total staked value
     */
-    function stake() external payable {
-        require(pauseStaking == false, "staking is paused");
-        require(msg.value >= minAmount, "amount too low");
-        require(msg.value <= maxAmount, "amount too high");
+    error StakeIsPaused(); 
+    error AmountTooLow();
+    error AmountTooHigh();
+    function stake() external payable { // @note payable, reentrancy attack ?
+        // @audit-ok gas - use error instead of string error for consumption on deploy gas cost
+        if(pauseStaking)
+            revert StakeIsPaused(); 
+        if(msg.value < minAmount)   // @audit-ok there is no information about the minAMoun and maxAmount has the "=" sign
+            revert AmountTooLow();
+        if(msg.value > maxAmount) // @note how its possible to set minAmount and maxAmount to exploit the contract
+            revert AmountTooHigh();
 
         uint256 underlyingValue = 0;
-
+    
         // Getting underlying value in terms of ETH for each derivative
-        for (uint i = 0; i < derivativeCount; i++)
+        // @note get underlying value per derivative and multiply by his balance
+        // @note how to save gas in this forloop
+        for (uint i = 0; i < derivativeCount;){ 
+            IDerivative derivative = derivatives[i];
             underlyingValue +=
-                (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
-                    derivatives[i].balance()) /
-                10 ** 18;
+                (derivative.ethPerDerivative(derivative.balance()) *
+                    derivative.balance()) / 1 ether;
 
-        uint256 totalSupply = totalSupply();
+            // @audit-ok [gas] use unchecked
+            unchecked {
+                i++;
+            }
+        } 
+
+        uint256 totalSupply = totalSupply(); // @note how is set the totalSupply ?
         uint256 preDepositPrice; // Price of safETH in regards to ETH
         if (totalSupply == 0)
-            preDepositPrice = 10 ** 18; // initializes with a price of 1
-        else preDepositPrice = (10 ** 18 * underlyingValue) / totalSupply;
+            preDepositPrice = 1 ether; // initializes with a price of 1 @audit-ok use ether for more redability
+        else preDepositPrice = (1 ether * underlyingValue) / totalSupply;
 
         uint256 totalStakeValueEth = 0; // total amount of derivatives worth of ETH in system
-        for (uint i = 0; i < derivativeCount; i++) {
+        for (uint i = 0; i < derivativeCount; i++) { 
             uint256 weight = weights[i];
             IDerivative derivative = derivatives[i];
             if (weight == 0) continue;
@@ -91,8 +116,8 @@ contract SafEth is
             uint256 depositAmount = derivative.deposit{value: ethAmount}();
             uint derivativeReceivedEthValue = (derivative.ethPerDerivative(
                 depositAmount
-            ) * depositAmount) / 10 ** 18;
-            totalStakeValueEth += derivativeReceivedEthValue;
+            ) * depositAmount) / 1 ether;
+            totalStakeValueEth +=  derivativeReceivedEthValue;
         }
         // mintAmount represents a percentage of the total assets in the system
         uint256 mintAmount = (totalStakeValueEth * 10 ** 18) / preDepositPrice;
@@ -100,22 +125,33 @@ contract SafEth is
         emit Staked(msg.sender, msg.value, mintAmount);
     }
 
+    error UnstakingIsPaused();
+    error FailedToSendEther();
     /**
         @notice - Unstake your safETH into ETH
         @dev - unstakes a percentage of safEth based on its total value
         @param _safEthAmount - amount of safETH to unstake into ETH
+    */    
+    /*
+        @audit-ok gas cost before  = avg 525742 
+                  gas cost after   = avg 515707
+                  deploy cost before = 2322297 
+                  deploy cost after =  2301828
     */
     function unstake(uint256 _safEthAmount) external {
-        require(pauseUnstaking == false, "unstaking is paused");
+        // @audit-ok [GAS] use error instead of string error for consumption on deploy gas cost 
+        if(pauseUnstaking)
+            revert UnstakingIsPaused(); 
         uint256 safEthTotalSupply = totalSupply();
         uint256 ethAmountBefore = address(this).balance;
 
         for (uint256 i = 0; i < derivativeCount; i++) {
+            IDerivative derivative = derivatives[i];
             // withdraw a percentage of each asset based on the amount of safETH
-            uint256 derivativeAmount = (derivatives[i].balance() *
+            uint256 derivativeAmount = (derivative.balance() *
                 _safEthAmount) / safEthTotalSupply;
             if (derivativeAmount == 0) continue; // if derivative empty ignore
-            derivatives[i].withdraw(derivativeAmount);
+            derivative.withdraw(derivativeAmount);
         }
         _burn(msg.sender, _safEthAmount);
         uint256 ethAmountAfter = address(this).balance;
@@ -124,7 +160,9 @@ contract SafEth is
         (bool sent, ) = address(msg.sender).call{value: ethAmountToWithdraw}(
             ""
         );
-        require(sent, "Failed to send Ether");
+        // @audit-ok [GAS] use error instead of string error for consumption on deploy gas cost 
+        if(!sent) 
+            revert FailedToSendEther();
         emit Unstaked(msg.sender, ethAmountToWithdraw, _safEthAmount);
     }
 
@@ -135,25 +173,41 @@ contract SafEth is
         @dev - If weights are updated then it will slowly change over time to the correct weight distribution
         @dev - Probably not going to be used often, if at all
     */
+    /*
+        @audit-ok gas cost before = avg 727618
+                  gas cost after  = avg 726518
+    */
     function rebalanceToWeights() external onlyOwner {
         uint256 ethAmountBefore = address(this).balance;
-        for (uint i = 0; i < derivativeCount; i++) {
-            if (derivatives[i].balance() > 0)
-                derivatives[i].withdraw(derivatives[i].balance());
+
+        for (uint i = 0; i < derivativeCount;) {
+            IDerivative derivative = derivatives[i];
+            if (derivative.balance() > 0)
+                derivative.withdraw(derivative.balance()); 
+            // @audit-ok [gas] use unchecked
+            unchecked {
+                i++;
+            }
         }
         uint256 ethAmountAfter = address(this).balance;
         uint256 ethAmountToRebalance = ethAmountAfter - ethAmountBefore;
 
         for (uint i = 0; i < derivativeCount; i++) {
-            if (weights[i] == 0 || ethAmountToRebalance == 0) continue;
-            uint256 ethAmount = (ethAmountToRebalance * weights[i]) /
+            uint256 weight = weights[i];
+            // @audit-ok [gas] trade off 2 ifs decrease the call gas cost but increase the deploy gas cost
+            if (weight == 0 || ethAmountToRebalance == 0) continue;
+            uint256 ethAmount = (ethAmountToRebalance * weight) /
                 totalWeight;
             // Price will change due to slippage
-            derivatives[i].deposit{value: ethAmount}();
+            derivatives[i].deposit{value: ethAmount}();           
         }
         emit Rebalanced();
     }
 
+    /*
+        @audit-ok gas cost before = avg 46519
+                  gas cost after  = avg 46519
+    */
     /**
         @notice - Adds new derivative to the index fund
         @dev - Weights are only in regards to each other, total weight changes with this function
@@ -167,7 +221,7 @@ contract SafEth is
         uint256 _weight
     ) external onlyOwner {
         weights[_derivativeIndex] = _weight;
-        uint256 localTotalWeight = 0;
+        uint256 localTotalWeight;
         for (uint256 i = 0; i < derivativeCount; i++)
             localTotalWeight += weights[i];
         totalWeight = localTotalWeight;
@@ -179,16 +233,18 @@ contract SafEth is
         @param _contractAddress - Address of the derivative contract launched by AF
         @param _weight - new weight for this derivative. 
     */
+   // @note addDerivative function - those derivaties are used in stake function
     function addDerivative(
         address _contractAddress,
         uint256 _weight
     ) external onlyOwner {
-        derivatives[derivativeCount] = IDerivative(_contractAddress);
+        derivatives[derivativeCount] = IDerivative(_contractAddress); // @note is it possible to remove a wrong derivative
         weights[derivativeCount] = _weight;
         derivativeCount++;
 
         uint256 localTotalWeight = 0;
-        for (uint256 i = 0; i < derivativeCount; i++)
+        // @note the increased value od derivativeCount this forloop will be more gas consumption. How to avoid that ?
+        for (uint256 i = 0; i < derivativeCount; i++) // @note is not possible to move line 192 inside this forloop so we don't need to use i++ local variable5
             localTotalWeight += weights[i];
         totalWeight = localTotalWeight;
         emit DerivativeAdded(_contractAddress, _weight, derivativeCount);
@@ -243,5 +299,5 @@ contract SafEth is
         emit UnstakingPaused(pauseUnstaking);
     }
 
-    receive() external payable {}
+    receive() external payable {} // @note how it works receive ?
 }
