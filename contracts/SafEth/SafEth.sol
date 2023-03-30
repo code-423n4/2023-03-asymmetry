@@ -60,15 +60,24 @@ contract SafEth is
         @dev - Deposits into each derivative based on its weight
         @dev - Mints safEth in a redeemable value which equals to the correct percentage of the total staked value
     */
+
+    error StakingIsPaused();
+    error AmountTooLow();
+    error AmountTooHigh();
+
     function stake() external payable {
-        require(pauseStaking == false, "staking is paused");
-        require(msg.value >= minAmount, "amount too low");
-        require(msg.value <= maxAmount, "amount too high");
+        // @audit-ok [gas] - use custom errors rather than revert()/require() strings to save gas
+        if(pauseStaking)
+            revert StakingIsPaused();
+        if(msg.value <= minAmount)
+            revert AmountTooLow();
+        if(msg.value >= maxAmount)
+            revert AmountTooHigh();
 
         uint256 underlyingValue = 0;
 
         // Getting underlying value in terms of ETH for each derivative
-        for (uint i = 0; i < derivativeCount; i++)
+        for (uint i = 0; i < derivativeCount; i++) 
             underlyingValue +=
                 (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
                     derivatives[i].balance()) /
@@ -100,13 +109,18 @@ contract SafEth is
         emit Staked(msg.sender, msg.value, mintAmount);
     }
 
+    error UnstakingIsPaused();
+    error FailedToSendEther();
+
     /**
         @notice - Unstake your safETH into ETH
         @dev - unstakes a percentage of safEth based on its total value
         @param _safEthAmount - amount of safETH to unstake into ETH
     */
     function unstake(uint256 _safEthAmount) external {
-        require(pauseUnstaking == false, "unstaking is paused");
+        // @audit-ok [gas] - use custom errors rather than revert()/require() strings to save gas
+        if(pauseStaking)
+            revert UnstakingIsPaused();
         uint256 safEthTotalSupply = totalSupply();
         uint256 ethAmountBefore = address(this).balance;
 
@@ -124,7 +138,8 @@ contract SafEth is
         (bool sent, ) = address(msg.sender).call{value: ethAmountToWithdraw}(
             ""
         );
-        require(sent, "Failed to send Ether");
+        if(!sent)
+            revert FailedToSendEther();
         emit Unstaked(msg.sender, ethAmountToWithdraw, _safEthAmount);
     }
 

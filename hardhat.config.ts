@@ -101,7 +101,8 @@ const config: HardhatUserConfig = {
     enabled: process.env.REPORT_GAS !== undefined,
     currency: "USD",
     noColors: true,
-    token: "ETH"
+    token: "ETH",
+    onlyCalledMethods: true
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
