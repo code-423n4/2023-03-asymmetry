@@ -77,11 +77,17 @@ contract SafEth is
         uint256 underlyingValue = 0;
 
         // Getting underlying value in terms of ETH for each derivative
-        for (uint i = 0; i < derivativeCount; i++) 
+        for (uint i = 0; i < derivativeCount;){
             underlyingValue +=
                 (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
                     derivatives[i].balance()) /
                 10 ** 18;
+
+            unchecked {
+                i++;
+            }
+        }
+
 
         uint256 totalSupply = totalSupply();
         uint256 preDepositPrice; // Price of safETH in regards to ETH
