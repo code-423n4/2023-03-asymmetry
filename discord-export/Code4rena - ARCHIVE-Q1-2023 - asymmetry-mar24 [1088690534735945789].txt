@@ -1,0 +1,3046 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2023 / asymmetry-mar24
+==============================================================
+
+[03/24/2023 05:10] paroxysm9999 (pinned)
+👋 Hello and welcome to the contest channel for the **$49,200 USDC** Asymmetry contest!
+
+📆 Contest opens 03/24/2023 20:00 (20:00 UTC) and runs through 03/30/2023 20:00  (20:00 UTC) (6 days).
+
+Please give a warm welcome to the Asymmetry team, particularly @Toshi, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2023-03-asymmetry-contest
+
+{Embed}
+https://code4rena.com/contests/2023-03-asymmetry-contest
+Code4rena Asymmetry contest
+$49,200 USDC
+24 March 2023—30 March 2023
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+😤 (3) 🙃 (2) 
+
+[03/24/2023 05:11] paroxysm9999
+Pinned a message.
+
+
+[03/24/2023 06:01] CRYP70#8985
+👋😁
+
+{Reactions}
+👋 (11) 😁 (5) 
+
+[03/24/2023 06:11] paroxysm9999
+Hi 👋! Let's please limit conversation until the contest begins. Thanks!
+
+
+[03/24/2023 20:01] 0xhacksmithh
+Is this a private contest ??
+
+
+[03/24/2023 20:02] itsmetechjay
+It's public.
+
+
+[03/24/2023 20:04] mis4nthr0pic
+Niceeeeee
+
+
+[03/24/2023 20:08] to_sh_i_
+Hey everyone! I'm Toshi and I'm available for any questions.  Feel free to ask here or DM.  I'm in MST so my replies will be around then, but I will try and be available as much as possible.  Please feel free to reach out!
+
+{Reactions}
+👋 (20) dance_vibe (3) 🦾 🕵️‍♂️ 
+
+[03/24/2023 20:10] brevist
+Hey @Jay | C4 ,
+I can't see the "Submit Findings" button on the contest page.
+Or may be I'm missing something...
+Could you advise, please!
+
+{Reactions}
+same (2) 
+
+[03/24/2023 20:11] itsmetechjay
+lemme look into it
+
+
+[03/24/2023 20:11] codingnamekiki
+same here, try this
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/Screenshot_2023-03-24_at_22.11.16-A14F0.png
+
+{Reactions}
+thankyou 
+
+[03/24/2023 20:13] brevist
+Thanks a lot @Kiki 👍
+
+
+[03/24/2023 20:13] dingo2077
+Do you have foundry tests?
+
+
+[03/24/2023 20:14] brevist
+Thanks @Jay | C4 , the link shared by @Kiki is working. So, please, never mind. Sorry for the inconvenience!
+
+
+[03/24/2023 20:14] itsmetechjay (pinned)
+We will look into this @🐺wardens. In the meantime here are some helpful links:
+
+View repo: https://github.com/code-423n4/2023-03-asymmetry
+Submit findings: https://code4rena.com/contests/2023-03-asymmetry-contest/submit/
+
+{Reactions}
+👍 (7) thankyou (2) 🫡 (2) 
+
+[03/24/2023 20:15] itsmetechjay
+Pinned a message.
+
+
+[03/24/2023 20:15] codingnamekiki
+:10_10:  for Jay Jay
+
+{Reactions}
+💜 (2) 
+
+[03/24/2023 20:17] dingo2077
+@Toshi
+
+
+[03/24/2023 20:17] aba1842
+talk about high speed at finding issues ...
+
+{Reactions}
+😂 (11) 
+
+[03/24/2023 20:17] 0xhacksmithh
+When i try to login it shows me registastion form, When try to login using userName and password a popup came with loggedIn msg but no result, I'm a old warden here(2months)
+
+
+[03/24/2023 20:18] to_sh_i_
+We do not have foundry tests, they are only in hardhat(ts) for now
+
+{Reactions}
+👍 💯 
+
+[03/24/2023 20:18] dingo2077
+🥺
+
+
+[03/24/2023 20:19] itsmetechjay
+Thanks for the flag!
+
+{Reactions}
+👍 
+
+[03/24/2023 20:19] 0xhacksmithh
+Usually i loggedIn with metamask but, now it shows me registration form
+
+
+[03/24/2023 20:21] to_sh_i_
+We are old typescript developer so it's pretty easy for us to do tests with hardhat.  We have thought about migrating tests to foundry eventually
+
+{Reactions}
+👍 (3) 
+
+[03/24/2023 20:25] koko1912
+When the automated findings are going to be imported?
+
+
+[03/24/2023 20:26] BitsOrBytes#7359
+within one hour of opening it seems (so about 30 mins from now)
+
+{Reactions}
+👍🏻 (2) 
+
+[03/24/2023 20:28] 0xjuancito
+anyone was able to run the tests?
+
+
+[03/24/2023 20:29] to_sh_i_
+what error are you seeing?
+
+
+[03/24/2023 20:31] adriro
+@Toshi are you using transparent proxies for upgradeable contracts?
+
+
+[03/24/2023 20:31] 0xjuancito
+I was missing the `MAINNET_URL` in the `.env`. Solved
+
+
+[03/24/2023 20:39] 0xfps
+LFG 🚀!!
+
+
+[03/24/2023 20:40] rotcivegaf
+Is there an Automated findings output?
+
+
+[03/24/2023 20:40] 0xfps
+Within one hour of contest commencement.
+
+
+[03/24/2023 20:42] to_sh_i_
+we are not
+
+
+[03/24/2023 20:42] adriro
+what are you using? uups?
+
+
+[03/24/2023 20:47] 0xjuancito
+Not sure if you wanna keep it private, but the repo link on the readme still is:
+`- If you have a public code repo, please share it here: https://github.com/asymmetryfinance/smart-contracts`
+
+
+[03/24/2023 20:49] parsely.
+@Jay | C4  I have run a version of the automated findings if it's needed
+
+
+[03/24/2023 20:49] itsmetechjay
+Will DM
+
+
+[03/24/2023 20:59] koko1912
+Will you announce when the Automated findings are uploaded?
+
+{Reactions}
+👍 (2) 
+
+[03/24/2023 21:03] itsmetechjay
+@🐺wardens We are experiencing some issues with the submission form for this contest. Our team is actively looking into it, but we may not have an update for several hours due to staff time zones.
+
+{Reactions}
+👍 (10) ✅ (4) 👍🏻 (2) 
+
+[03/24/2023 21:04] flyingdev
+sure
+
+
+[03/24/2023 21:04] to_sh_i_
+no, just standard eip1967 storage slots.  We are implementing with open zeppelin's ERC20Upgradeable contract
+
+
+[03/24/2023 21:10] koko1912
+I need to keep the repository private, don't I?
+
+
+[03/24/2023 21:16] doublesharp
+This repo is public on github
+
+{Reactions}
+👍🏻 (2) 
+
+[03/24/2023 21:30] natzuu33
+https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4
+
+{Embed}
+https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4
+Asymmetry automated findings
+Asymmetry automated findings. GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/gist-og-image-17482.png
+
+
+[03/24/2023 21:32] liveactionllamac4 (pinned)
+Wardens, please note that the automated findings output is posted below. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings:** https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4
+
+{Reactions}
+👍 (6) 
+
+[03/24/2023 21:33] liveactionllamac4
+Pinned a message.
+
+
+[03/24/2023 22:09] bluealder
+anyone ran into `npm ERR! ERESOLVE unable to resolve dependency tree` when installing dependencies?
+
+
+[03/24/2023 22:13] bluealder
+i used the `--legacy-peer-deps` and it seems to have worked, but not sure why this was required
+
+
+[03/24/2023 22:14] bluealder
+oh, i just didnt follow the instructions 😆
+
+
+[03/24/2023 22:57] 0xpathfindr
+When running tests 11 pass and 19 fail. Anyone else facing this issue?
+
+
+[03/24/2023 22:58] 0xpathfindr
+I have populated .env with appropriate values. Everything (apart from `ETHERSCAN_API_KEY=`) has been filled.
+
+
+[03/24/2023 22:59] illilli000
+did you try the quickstart command?
+
+
+[03/24/2023 22:59] 0xpathfindr
+No
+
+
+[03/24/2023 23:00] 0xpathfindr
+Let me give that a go
+
+
+[03/24/2023 23:01] vagner_andrei
+for me everything passes and i just put the mainnet_url into the env
+
+{Reactions}
+same (4) 
+
+[03/24/2023 23:09] chaduke3730
+If anyone can share the foundry test setup that would be great
+
+{Reactions}
+🔥 
+
+[03/24/2023 23:11] co0nan
+I used the command from the repo after updating my mainnet_url uri and works fine.
+
+
+[03/25/2023 00:25] climber2002#7916
+Do we consider admin set invalid params or malicious admin as a vulnerability? Thanks.
+
+
+[03/25/2023 00:31] itsmetechjay
+@🐺wardens the submission form is working again. And you should see the `view repo` and `submit findings` button on the contest page.  Thanks for your patience.
+
+{Reactions}
+👍 (16) 
+
+[03/25/2023 03:02] ubl4nk#1934
+Anyone can share the `mainnet_url` ? Alchemy is blocked in our country and am unable to login
+
+
+[03/25/2023 03:04] carrotsmuggler
+you can use any rpc url from chainlist
+
+
+[03/25/2023 03:05] ubl4nk#1934
+Could you provide an example RPC node url?
+
+
+[03/25/2023 03:05] carrotsmuggler
+https://rpc.ankr.com/eth
+
+{Embed}
+https://rpc.ankr.com/eth
+Build on Ethereum With Instant RPC Endpoint
+Use a decentralized and free Ethereum public RPC endpoint
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/logo-545FC.png
+
+{Reactions}
+👍 
+
+[03/25/2023 03:06] ubl4nk#1934
+Many thanks
+
+
+[03/25/2023 03:17] ubl4nk#1934
+I think this is mentioned in known issues https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4#m-1-centralization-risk-for-trusted-owners
+
+{Embed}
+https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4
+Asymmetry automated findings
+Asymmetry automated findings. GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/gist-og-image-17482.png
+
+
+[03/25/2023 03:22] bluealder
+any smart way to check how much gas would be saved from an optimisation?
+
+
+[03/25/2023 04:34] BitsOrBytes#7359
+foundry gas report before and after making the changes
+
+{Reactions}
+hi5 (3) 
+
+[03/25/2023 04:35] BitsOrBytes#7359
+https://book.getfoundry.sh/forge/gas-reports?highlight=gas%20report#gas-reports
+
+
+[03/25/2023 07:45] mlome
+What are Lookout and Mitigation review awards?
+
+
+[03/25/2023 07:48] 0x3b
+can anyone help me,  in SafETH.sol  line 78 there is    uint256 totalSupply = totalSupply();    This totalSupply is it on SafETH in existance or into the contract, or it is something else
+
+
+[03/25/2023 07:57] _0xfanz
+ERC20
+
+
+[03/25/2023 08:10] aga7hokakological
+In stake() function there is comment: `// Getting underlying value in terms of ETH for each derivative` that means it is calculating eth amount for wstETH, rETH, sfrxETH right?
+
+
+[03/25/2023 08:33] chalex.eth
+someone have been able to implement a minimal PoC in foundry, I get stuck trying to deploy contract same way as hardhat
+
+
+[03/25/2023 08:35] ZeltaX#3366
+If you happen to discover a bug and are able to provide an effective solution for resolving it, you may be eligible for a mitigation award.
+
+
+[03/25/2023 08:44] illilli000
+that is not correct. they're described here https://github.com/code-423n4/org/discussions/15
+
+{Reactions}
+🙃 
+
+[03/25/2023 08:52] ZeltaX#3366
+Thank you so much for clearing up my confusion!
+
+{Reactions}
+👍 
+
+[03/25/2023 10:22] 0xpathfindr
+Thanks, after updating the Mainnet URL it worked
+
+{Reactions}
+👍 
+
+[03/25/2023 11:20] devabdee
+Are any dev docs available? @Toshi
+
+
+[03/25/2023 11:30] lopotras
+@Toshi DMed you
+
+
+[03/25/2023 11:36] devabdee
+@Toshi dky I can't DM you pls accept my Friend Request
+
+
+[03/25/2023 11:52] lopotras
+you might have direct message from server members blocked. You can't send them if you do
+
+{Reactions}
+👍 
+
+[03/25/2023 12:53] 0x3b
+I am confuzed by _disableInitializers() in every constuctor, won't this make the contract non initializable? Before even the owner can initialize it.
+
+
+[03/25/2023 12:57] 0xjuancito
+There's a link above the constructor explaining it
+
+
+[03/25/2023 12:57] B.marouen#0502
+will it make any diffrence if i submit my findings before other auditors ??
+
+
+[03/25/2023 12:58] 0xjuancito
+Nope. There's no extra rewards for the first submissions
+
+{Reactions}
+👍 
+
+[03/25/2023 13:29] chalex.eth
+I think this is not correct 
+https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4#l-2-initializers-could-be-front-run
+in the constructor they set _disableConstructor() and they init the value in the hardhat in the deployment script
+
+{Embed}
+https://gist.github.com/muratkurtulus/c7a89b0ef411b5b96dd8af23ccd95dc4
+Asymmetry automated findings
+Asymmetry automated findings. GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/gist-og-image-17482.png
+
+
+[03/25/2023 13:39] Franfran#5067
+yes, other stuff such as use assembly to check for address(0) are wrong as well, because it doesn't save gas
+
+
+[03/25/2023 13:41] aga7hokakological
+I tried but test is failing for stake() function. For any amount it is giving error saying amount is too high
+
+
+[03/25/2023 13:41] Franfran#5067
+i.e it's just applying a regex check for initializable functions, there is no analysis here: https://github.com/Picodes/4naly3er/blob/main/src/issues/L/frontRunnableInitializer.ts
+
+{Embed}
+https://github.com/Picodes/4naly3er/blob/main/src/issues/L/frontRunnableInitializer.ts
+4naly3er/frontRunnableInitializer.ts at main · Picodes/4naly3er
+Static smart contract code 4naly3er. Contribute to Picodes/4naly3er development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/4naly3er-DB6A0
+
+
+[03/25/2023 14:27] _3agle
+@Toshi Do we have any documentation available??
+
+{Reactions}
+☝️ (4) 🕵️‍♂️ 
+
+[03/25/2023 15:17] to_sh_i_
+No dev docs other than readme available for now, what are you looking for?
+
+
+[03/25/2023 15:17] to_sh_i_
+Other than the Readme, nothing else exists for now
+
+{Reactions}
+👍 (2) 
+
+[03/25/2023 15:29] t1moh
+@Toshi dmed you
+
+{Reactions}
+👀 
+
+[03/25/2023 16:09] road220
+try exploring test cases, that helps a lot as well!
+
+{Reactions}
+👍 (4) 
+
+[03/25/2023 16:11] eyexploit
+Hi @Toshi  derivative contract has modifier `onlyOwner` on deposit and withdraw function, Does safETH contract own that ownership?
+
+
+[03/25/2023 16:12] to_sh_i_
+Correct, safETH is the owner of all derivative contracts
+
+{Reactions}
+👍 (3) 
+
+[03/25/2023 16:13] to_sh_i_
+Yea I haven't realized how big foundry has blown up and people expect tests written in that.  I think it makes sense for those developers who don't have a JS background
+
+
+[03/25/2023 16:13] to_sh_i_
+I like hardhat's tooling, but think we can implement tests in solidity in the future
+
+
+[03/25/2023 16:14] road220
+for instance, looking at this test case you would understand that the owner of derivative contracts is safETH 😄
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/Screenshot_2023-03-25_at_19.14.01-740E5.png
+
+{Reactions}
+😄 
+
+[03/25/2023 16:15] eyexploit
+ahh! thanks
+
+
+[03/25/2023 16:17] road220
+btw, huge kudos for clean tests suite)
+
+{Reactions}
+🔥 (2) 👏🏻 (2) 
+
+[03/25/2023 16:18] sathish9098kumar
+unable to compile . What is problem ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-6D5EA.png
+
+
+[03/25/2023 16:18] road220
+nvm use?
+
+
+[03/25/2023 16:19] sathish9098kumar
+created .env file and put the alchemy http url in MAINNET_URL
+
+
+[03/25/2023 16:20] sathish9098kumar
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-6F231.png
+
+
+[03/25/2023 16:21] sathish9098kumar
+i don't understand please send clear steps please
+
+
+[03/25/2023 16:36] to_sh_i_
+So you will need to install `nvm` the steps to do that will differ based on your OS
+
+
+[03/25/2023 16:36] sathish9098kumar
+Okay
+
+
+[03/25/2023 16:37] to_sh_i_
+https://github.com/nvm-sh/nvm
+
+{Embed}
+https://github.com/nvm-sh/nvm
+GitHub - nvm-sh/nvm: Node Version Manager - POSIX-compliant bash sc...
+Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions - GitHub - nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active nod...
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/nvm-637D4
+
+{Reactions}
+👍 
+
+[03/25/2023 20:26] popular
+thanks for linking this, didn't realize the analyzer picked that one up haha
+
+
+[03/25/2023 20:28] pfapostol
+Foundry is usually faster and easier to read and understand (for example, most code editors allow you to jump directly to a function definition from a function call in a test).
+But your tests are still very good
+
+
+[03/25/2023 20:52] igingu
+Hi @Toshi , I dmed you, if you can please assist. Thanks!
+
+{Reactions}
+👏 
+
+[03/25/2023 21:28] dec3ntraliz3d
+Agree , love foundry. Btw do you know how to write test for open zeppelin upgradable contracts in foundry. Hardhat has built in plugins for that but I am trying to find out how I can do it in foundry.
+
+
+[03/25/2023 21:41] illilli000
+talk specific to the contest only here, please 🙏
+
+{Reactions}
+👍 (4) 
+
+[03/25/2023 22:15] dec3ntraliz3d
+sorry. i was trying to write the test for this project in foundry. won’t discuss this further.
+
+
+[03/25/2023 23:14] ubl4nk#1934
+Can i find the contracts on test networks ?
+
+
+[03/25/2023 23:15] ubl4nk#1934
+They are deployed on any test network ?
+
+
+[03/25/2023 23:27] to_sh_i_
+There is no contracts on test networks.  There is a way to deploy locally though and integrate using Ethernal if you'd be interested in that
+
+{Reactions}
+👍 (2) 
+
+[03/25/2023 23:28] timadinorth
+no audits before, correct ?
+
+
+[03/25/2023 23:28] to_sh_i_
+correct
+
+{Reactions}
+👍 (3) 
+
+[03/25/2023 23:31] timadinorth
+can you please elaborate on this "A lot of protocols haven't implemented withdrawing yet, so the derivative contracts will be upgraded after Shanghai"
+
+{Reactions}
+☝️ (3) 
+
+[03/26/2023 05:25] road220
+EIP-4895 is everything you need to know and if you have some questions regarding to withdrawals, you can dm me directly
+
+
+[03/26/2023 06:15] pfapostol
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/SPOILER_foundry_proxy-204E6.png
+
+{Reactions}
+👍 (6) ❤️ (3) 🙏🏼 (4) ❤️‍🔥 🙏 
+
+[03/26/2023 09:05] climber2002#7916
+Hi @Toshi sent you a DM, thanks!
+
+{Reactions}
+👏 
+
+[03/26/2023 12:14] lopotras
+@Toshi is there any particular reason behind not exposing custom slippage setting to the user for deposit/withdrawal (where applicable)?
+
+
+[03/26/2023 14:51] oualidpro#8727
+Hi @Toshi i've sent you a DM
+
+{Reactions}
+👏 
+
+[03/26/2023 14:56] to_sh_i_
+I think these could be public
+
+
+[03/26/2023 15:52] 0xnorman
+@Toshi Hi Toshi, so currently only rETH,wstETH, sfrxETH are supported. But the scope could be enlarged right?
+
+{Reactions}
+💯 
+
+[03/26/2023 17:34] 0xsorrynotsorry
+Hi @Toshi , I sent a DM as well. Thank you for your time.
+
+{Reactions}
+👀 
+
+[03/26/2023 18:19] codingnamekiki
+may not have audits, but the code is solid.
+
+{Reactions}
+❤️‍🔥 (4) 
+
+[03/26/2023 18:19] codingnamekiki
+:pepemexican:
+
+{Reactions}
+👍 (2) 
+
+[03/26/2023 19:01] 0xl3xx
+Hey @Toshi , I 've sent a DM.
+
+
+[03/26/2023 19:21] to_sh_i_
+Correct.  Derivatives can be added and taken away (by setting weight to 0)
+
+{Reactions}
+👍 (7) 
+
+[03/26/2023 19:22] to_sh_i_
+ty!
+
+
+[03/26/2023 20:02] shalaamum
+@Toshi i sent you a DM as well 🙂
+
+{Reactions}
+👀 
+
+[03/27/2023 04:58] bluealder
+Im so interested to see the highs
+
+{Reactions}
+same (6) 
+
+[03/27/2023 07:17] B.marouen#0502
+Any idea on when they will release all reports ??
+
+
+[03/27/2023 07:29] evokid
+contest still active Ends in 3 days
+
+
+[03/27/2023 07:59] t.nero
+Around 3 months after the contest has ended. Average from previous contests.
+
+Might be quicker though, if less total findings.
+
+
+[03/27/2023 08:00] neon2835
+3 weeks
+
+{Reactions}
+👍 (2) 
+
+[03/27/2023 10:25] 0xbtk
+@Neon2835 Dmed you
+
+
+[03/27/2023 10:37] 0xsorrynotsorry
+Hey @Toshi , you might have missed  my DM 😅
+
+
+[03/27/2023 11:02] evokid
+me too
+
+
+[03/27/2023 11:45] oualidpro#8727
+Please its my first time to participate in a contest ... is there any template we should follow for gas optimization ?
+
+
+[03/27/2023 12:08] Deleted User
+Im new here too🔥. What I’d do is try and optimize the gas costs and test them in Hardhat or Foundry
+
+
+[03/27/2023 12:10] oualidpro#8727
+I am actually talking about the report structure ... how it should look like
+
+
+[03/27/2023 12:21] igingu
+You can look at previous reports, and try to make it look like those. That's what I did and it was alright
+
+{Reactions}
+👆 
+
+[03/27/2023 12:21] oualidpro#8727
+That's what i have started to do now too 😊👍
+
+
+[03/27/2023 12:42] 3dgeville#0311
+@Toshi sendt a dm
+
+
+[03/27/2023 13:28] pavankv
+@Toshi DMED you
+
+
+[03/27/2023 13:43] Franfran#5067
+`_disableInitializers()` is used to avoid initializing the implementation contract by anybody, but won't touch the proxy since the proxy is using delegatecall, so the proxy storage not the implementation
+
+{Reactions}
+👆 (2) 
+
+[03/27/2023 14:08] 0xepley
+what does this initializer means
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-297AD.png
+
+
+[03/27/2023 14:09] 0x3b
+It  basicly a constructor
+
+
+[03/27/2023 14:09] 0x3b
+Called only onece and should be called never again
+
+
+[03/27/2023 14:10] 0xepley
+i'm talking about initializer or not initialize
+
+
+[03/27/2023 14:11] 0xpathfindr
+How are rewards for each derivative calculated ?
+
+
+[03/27/2023 14:12] parsely.
+Its a modifier in the ownable contract, i think it's the ownable, but one of them edit: corrected for anyone that reads later, it's in Initializable not ownable
+
+{Reactions}
+👍 
+
+[03/27/2023 14:12] 0xepley
+thank u
+
+
+[03/27/2023 14:13] 0xjuancito
+It's in the Initializable contract, but yeah, same thing
+
+{Reactions}
+👍 
+
+[03/27/2023 14:13] parsely.
+Sorry yes, you are correct
+
+
+[03/27/2023 14:25] CRYP70#8985
+@Toshi Sent you a DM 🙂
+
+
+[03/27/2023 14:37] 0xpathfindr
+@Toshi same
+
+
+[03/27/2023 15:04] slvdev
+wow 🙂 why are there so many questions not related to the protocol itself?
+
+{Reactions}
+🤷‍♂️ 
+
+[03/27/2023 15:05] dingo2077
+@Toshi dmed you mate
+
+
+[03/27/2023 15:37] 0xbepresent
+@Toshi sent you a DM 🙏
+
+
+[03/27/2023 16:15] 0xbtk
+@Toshi dmed you
+
+
+[03/27/2023 16:26] to_sh_i_
+I'm replying to messages now, got a lot in my inbox right now but getting through them
+
+{Reactions}
+❤️ (5) 
+
+[03/27/2023 16:35] road220
+If you have some general questions about the architecture or whatever, ask them here, I would prob help out a little too
+
+
+[03/27/2023 16:36] dingo2077
+As I understood here are 4 UPPS's, right?
+
+
+[03/27/2023 16:44] doublesharp
+If you mean uups proxy then no, these are transparent proxies
+
+
+[03/27/2023 16:48] dingo2077
+but 4, yeap?
+
+
+[03/27/2023 17:12] koko1912
+To bo honest you won't be able to make a lot of optimizations, because the project is pretty small and  it's only four files. However, you can still do something
+
+
+[03/27/2023 17:17] road220
+yeah, since the logic in derivatives could be upgraded upon shapella-upgrade for instance.
+
+{Reactions}
+🤝 
+
+[03/27/2023 17:19] koko1912
+How do you test? Can you explain, because I  tried, but it didn't work out really well
+
+
+[03/27/2023 17:30] 0xepley
+@Toshi sent u a dm
+
+{Reactions}
+👀 
+
+[03/27/2023 17:53] aga7hokakological
+by this you are setting weights for derivative as 33/33/33 right?
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-016EA.png
+
+
+[03/27/2023 17:58] aga7hokakological
+does this mean weight is not dependent on derivatives number? Like as if there are 3 derivatives each has 33/33/33 and if added 4th it will be 25/25/25/25. You can adjust them but in general it'll be like this only right?
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-D7A61.png
+
+
+[03/27/2023 18:04] co0nan
+I think this is just as an example
+
+
+[03/27/2023 18:05] to_sh_i_
+Yes weights are set only relative to each other.  So if you wanted to set weights as 50, 50, 900 then the distribution would be 5%, 5%, and 90%
+
+
+[03/27/2023 18:20] Deleted User
+What environment are you working in?? Hardhat??
+
+
+[03/27/2023 18:37] itsmetechjay
+@elmutt 👋
+
+{Reactions}
+cat 👋 
+
+[03/27/2023 18:44] koko1912
+I DM you
+
+
+[03/27/2023 18:58] co0nan
+@Toshi can we have your help on this?
+
+
+[03/27/2023 19:01] to_sh_i_
+So each token representation towards ETH changes over time.  For instance, 1 wstETH today might be equal 1.1 ETH and in a year 1 wstETH might be equal to 1.3 ETH.  The safETH that is minted is minted as a percentage ownership of the entire value of the protocol.  So whenever you withdraw your safETH you get whatever percentage of the total protocol's worth of ETH
+
+{Reactions}
+👍 (4) 
+
+[03/27/2023 19:01] to_sh_i_
+Does that make sense?
+
+
+[03/27/2023 19:07] co0nan
+fine to me, thanks
+
+
+[03/27/2023 19:32] 0xkazimm
+hey @Toshi , can you check your dm, i have some Question wanna ask you in private please
+
+{Reactions}
+👀 
+
+[03/27/2023 20:18] to_sh_i_
+I'm all caught up on DM's, if I missed yours by accident please let me know!
+
+{Reactions}
+🚀 (4) 
+
+[03/28/2023 00:48] ubl4nk#1934
+I am running the command `npx hardhat test --network localhost`
+
+
+[03/28/2023 00:49] ubl4nk#1934
+and i get this error : ` Error: cannot estimate gas; transaction may fail or may require manual gas limit`
+
+
+[03/28/2023 00:49] ubl4nk#1934
+any idea ?
+
+
+[03/28/2023 02:12] pppf00l
+😵
+
+
+[03/28/2023 02:50] to_sh_i_
+This is with you running the local node
+
+
+[03/28/2023 02:50] to_sh_i_
+?
+
+
+[03/28/2023 04:05] redtiger_auditor
+The test suite works fine with Alchemy Main net URL. But when spinning a local node on hardhat, everything breaks loose. Any body succeeded with the local node ?
+
+
+[03/28/2023 04:37] almurhasan#1056
+Hey,@Toshi check your dm
+
+
+[03/28/2023 05:24] PrasadLak#0622
+@Toshi pls check dm
+
+
+[03/28/2023 05:29] topdev
+@Toshi It seems good project
+
+
+[03/28/2023 05:51] 0xepley
+guys what is this totalsupply()
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-6F03A.png
+
+
+[03/28/2023 05:54] codingnamekiki
+the current amount of safEth tokens minted
+
+{Reactions}
+❤️ (3) 
+
+[03/28/2023 06:28] bluealder
+you will need to fork mainnet so the derivative token contracts are available
+
+
+[03/28/2023 06:45] redtiger_auditor
+Thanks
+
+
+[03/28/2023 06:57] pels.
+@Toshi Hi, I sent a friend request, got some questions to ask.
+
+{Reactions}
+👀 
+
+[03/28/2023 10:50] dingo2077
+Is it pertinently to use external links to store screenshots? like imgur?
+
+
+[03/28/2023 11:03] t.nero
+Yes, you can include it with markdown syntax.
+
+{Reactions}
+👍 
+
+[03/28/2023 11:29] rappie
+hi, what is the reason behind a min/max staking amount? which situations are you trying to prevent? also, are the current defaults meant to change often?
+
+
+[03/28/2023 11:54] road220
+the min/max staking amount assertion should exist. Lido has some kind of checks like that upon depositing to prevent precision loss issues when computing stETH amounts for instance. 
+Also, the withdrawal feature in feature/shapella-upgrade contains some max/min amounts to process withdrawals by little chunks of 100ETH, the min amount prob for preventing withdrawal spam, although it's not that much relevant, since the logic implemented by the Lido doesn't fully rely on the whole withdrawal queue, i.e. every single operation is performed with O(1) time complexity in average. Probably, finalization of the withdrawals batch requires O(log(n)), where n - number of withdrawals, but log(n) is not something that could cause some issues
+
+{Reactions}
+👍 (4) 
+
+[03/28/2023 12:35] lef8139
+hey guys
+1) i've registered to code4rena, do i need to register to an individual project to submit bugs?
+2) if a similar bug is found in 2 files, do we do 1 or 2 submissions? assuming Medium Severity
+
+
+[03/28/2023 12:40] 0xpathfindr
+Best to ask general questions in the #😃chat channel.
+
+{Reactions}
+👍🏻 
+
+[03/28/2023 13:41] 0xffchain
+Hi @Toshi send you a DM
+
+
+[03/28/2023 13:49] raymondfam
+Very informative. Could u please share the relevant github links where we could look into in detail the integration of the derivatives? Thanks.
+
+
+[03/28/2023 14:00] road220
+What would you like to see specifically? 
+feature/shapella-upgrade is here: https://github.com/lidofinance/lido-dao/tree/feature/shapella-upgrade
+
+{Reactions}
+👍 
+
+[03/28/2023 14:02] road220
+You can also dm me with a Lido related questions(including some EIP-4895 related ones), recently we had a chance to review their scope.
+
+
+[03/28/2023 14:15] raymondfam
+Wow lots of info and contracts to explore there. Thanks for sharing and will dm if I have further questions from there.
+
+{Reactions}
+💯 (3) 
+
+[03/28/2023 14:17] oyincode
+Hi @Toshi .... does this audit also include integration with other protocols like AAVE or any other?
+
+
+[03/28/2023 14:18] chrisapostolov
+It uses curve and uniswap to buy the tokens if it cannot directly deposit into a derivative
+
+{Reactions}
+☝️ 
+
+[03/28/2023 14:21] road220
+Btw, i think it's not yet in the scope, because the hard fork is not placed yet! But having an understanding over EIP-4895 helps to look a little into the long-term problems associated with Asymmetry.
+
+{Reactions}
+thankyou 
+
+[03/28/2023 14:29] co0nan
+will you allow users in the future to choose the weights for their ETH or this will be always controlled by the system?
+
+
+[03/28/2023 15:22] 0xnorman
+Hey guys, anyone knows how to do the remappings and run slither on this project?
+
+
+[03/28/2023 16:07] B.marouen#0502
+we can only submit 1 gas optimization report ?
+
+
+[03/28/2023 16:14] aga7hokakological
+you can add all your gas optimization in single report and submit it
+
+
+[03/28/2023 16:16] B.marouen#0502
+ohh, 
+i guess there is no way for me to modify submitted report
+
+
+[03/28/2023 16:16] B.marouen#0502
+?
+
+
+[03/28/2023 16:20] schrodingershen
+https://discord.com/channels/810916927919620096/810936719003090974/1087267351688388639
+
+{Reactions}
+cyberheart 
+
+[03/28/2023 16:21] B.marouen#0502
+thx
+
+
+[03/28/2023 16:36] ubl4nk#1934
+Yes i ran the local node using the command `npm run local-node`
+
+
+[03/28/2023 16:37] ubl4nk#1934
+Then i enter the command `npx hardhat test --network localhost` and i get that error
+
+
+[03/28/2023 16:40] ubl4nk#1934
+I have the same peoblem with local nodes, did you fix the problem ?
+
+
+[03/28/2023 16:46] to_sh_i_
+I'm running tests using `yarn test --network localhost` and it seems to be working (albeit very slowly)
+
+
+[03/28/2023 16:49] ubl4nk#1934
+I think i need to fork the specified block , i will test it ASAP
+
+{Reactions}
+👏 
+
+[03/28/2023 18:18] parsely.
+Does anyone perhaps know why I run into this error when running ```yarn deploy --network localhost``` I have added the Alchemy Mainnet URL to .ENV and it seems to have forked correctly but the deploy gives me this error ```ender doesn't have enough funds to send tx. The max upfront cost is: 60913099402933992 and the sender's account only has: 100000000029844``` EDIT: No problem I restarted the node and the deploy and it works fine now. Thanks
+
+
+[03/28/2023 18:33] 0xkazimm
+i have a question, did this protocol planning to interact/use more than the 3 derivatives that it used now ?
+
+
+[03/28/2023 18:36] remaerd369
+@Toshi sent fr
+
+
+[03/28/2023 18:58] road220
+ofc, liquid staking market is not only about 3 derivatives though :
+
+{Reactions}
+👍🏻 
+
+[03/28/2023 19:01] remaerd369
+@m_Rassska sent fr
+
+{Reactions}
+✅ 
+
+[03/28/2023 19:19] pheonix244001
+hello there . sorry for a dumb question but , can someone  tell me why stake function is working with msg.value instead of taking that as the function parameter and then working on it
+like this 
+function stake ( uint256 _stakeAmount )
+. Is it because the derivative contracts deposit function is working on msg.value ?
+
+
+[03/28/2023 19:22] 0xsurena
+because it’s working with mag.value =>>> ETH amount attached to the transaction
+
+
+[03/28/2023 19:27] 0xnorman
+https://discord.com/channels/810916927919620096/1088690534735945789/1089630285521490011
+
+
+[03/28/2023 19:28] 0xnorman
+yeah because stake() is a payable function. That's it
+
+
+[03/28/2023 19:28] viktor_cortess
+Hi everyone, in all derivative contracts I see @dev - Owner is set to SafEth contract, but in tests  owner is adminAccount.address i.e. Signer, not address of SafEth contract. Is it normal?
+
+
+[03/28/2023 20:16] 0xnorman
+@Jay | C4 Hi Jay, it is recommend to write QA report as a whole or separately?
+
+
+[03/28/2023 20:20] hex_sadeeq
+Pls when we do unstake from the safEth.sol contract and safEth is burnt is eth sent back to the contract???
+
+
+[03/28/2023 20:21] koko1912
+As I remember the gas and QA must be separated
+
+
+[03/28/2023 20:23] co0nan
+The ETH will be sent back to the msg.sender
+
+
+[03/28/2023 20:23] hex_sadeeq
+where is the implementation?
+
+
+[03/28/2023 20:24] co0nan
+Last lines on the unstake function
+
+
+[03/28/2023 20:24] 0xnorman
+thanks, but I mean if there are several QA issues, should we just combine them together in one report
+
+
+[03/28/2023 20:25] codingnamekiki
+Yes
+
+
+[03/28/2023 20:25] codingnamekiki
+Find all Low risks and non critical and combine them into one report for QA
+
+{Reactions}
+thankyou (2) 👍 
+
+[03/28/2023 20:26] itsmetechjay
+Yes what CodingNameKiki said @0xNorman.
+
+
+[03/28/2023 20:27] codingnamekiki
+:10_10:
+
+{Reactions}
+💯 
+
+[03/28/2023 20:27] 0xnorman
+Thanks @Kiki  @Jay | C4
+
+{Reactions}
+🫡 (3) 
+
+[03/28/2023 20:37] B.marouen#0502
+if i submit a medium and the team find that it is more of gas optimisation and not a medium
+ does the team change it to gas optimisation or it will be set to invalid ??
+
+
+[03/28/2023 21:25] Franfran#5067
+It's unlikely to find a medium that is downgraded to a gas optimization, as gas optimization don't have threats. It could be downgraded to QA though, usually as grade-b
+
+{Reactions}
+👍 
+
+[03/28/2023 21:40] B.marouen#0502
+okay cool, thanks 😄
+
+
+[03/28/2023 22:17] Bjorn_Bug#3314
+@Toshi Can you check your DM please?
+
+{Reactions}
+👀 
+
+[03/29/2023 00:16] ubl4nk#1934
+The user have to stake the ether not an ERC20 token.
+
+
+[03/29/2023 02:41] Cryptor#9119
+That's a bad idea. Why not just make your own judgement and let the judges make the final decision
+
+
+[03/29/2023 02:45] 0xtraub
+nvm i thought it was something but was wrong
+
+
+[03/29/2023 03:23] dewaxindo
+@Toshi pls accept my friend request
+
+
+[03/29/2023 04:54] dewaxindo
+Does anyone knows what is `preDepositPrice?`
+
+
+[03/29/2023 05:06] bluealder
+It is the derived price of the token given the value of the underlying derivatives the contract holds before the new derivatives are purchased
+
+
+[03/29/2023 05:08] bluealder
+e.g. 100 tokens in the supply. The contract holds derivatives that's total value is 50 ETH
+
+
+[03/29/2023 05:08] bluealder
+thereforce preDepositPrice is 50/100 -> 0.5 ETH per token
+
+{Reactions}
+👍🏻 (4) 
+
+[03/29/2023 06:45] dingo2077
+What if I add in low/qa section finding about centrilized risk, which already mentioned in automatic findings? Will all Low/QA report be disqualified?
+
+
+[03/29/2023 07:05] t.nero
+Yep, it will not be counted. Edit: (make it more clear) just any that included in the automated finding, not whole.
+
+{Reactions}
+👍 (2) 
+
+[03/29/2023 16:26] inmarelibero
+@Toshi I sent you a DM
+
+{Reactions}
+👀 
+
+[03/29/2023 19:24] dingo2077
+why github. I can explain it in submit form, but it will be deleted
+
+
+[03/29/2023 19:24] dingo2077
+it's just how owner can steal all funds
+
+
+[03/29/2023 19:28] aga7hokakological
+How rebalanceToWeights() can cause bad slippage which is written in comments? Explain?
+
+
+[03/29/2023 19:32] codingnamekiki
+You mean adding new compromised derivative in order for the owner to steal funds from the stakers. Sounds too unrealistic to be taken as medium, but perhaps might be taken for QA as it is mentioned only for medium in the automated findings.
+
+
+[03/29/2023 19:33] dingo2077
+exactly, just set 0/0/0/100 weight and call rebalance
+
+
+[03/29/2023 19:33] road220
+Because you have to  invoke a withdraw() on a secondary market, like on Curve. Where the excepted slippage is about 1% by now. Therefore expected loses could vary between 0-1%
+
+
+[03/29/2023 19:33] dingo2077
+ofc not med xD
+
+
+[03/29/2023 19:33] codingnamekiki
+Works fine for QA in my opinion
+
+
+[03/29/2023 19:34] dingo2077
+10% to me 😂
+
+
+[03/29/2023 21:59] ubl4nk#1934
+anyone can explain `ethPerDerivative `function ?
+
+
+[03/29/2023 21:59] Franfran#5067
+It's the underlying value of derivatives, in ETH
+
+{Reactions}
+👍 
+
+[03/29/2023 22:17] ubl4nk#1934
+`uint256 underlyingValue = 0;
+// Getting underlying value in terms of ETH for each derivative
+for (uint i = 0; i < derivativeCount; i++) {
+            underlyingValue +=
+                (derivatives[i].ethPerDerivative(derivatives[i].balance()) * derivatives[i].balance()) / 10 ** 18;
+}`
+
+
+[03/29/2023 22:17] ubl4nk#1934
+why `derivatives[i].balance()` is passed to `ethPerDerivative` ?
+
+
+[03/29/2023 22:32] Franfran#5067
+that's because it's calculating the underlying balance in ETH of the derivative pool
+
+
+[03/29/2023 22:38] ubl4nk#1934
+I don't think so, in wstETH and SfrxETH this parameter is unused but Reth contract is checking that this amount can be deposited to the  RocketPool or not.
+
+
+[03/29/2023 22:39] Franfran#5067
+because it's requesting the Derivative <> ETH exchange rate, so for 1 ETH
+
+
+[03/29/2023 22:40] Franfran#5067
+or 1 derivative token, wathever
+
+
+[03/29/2023 22:41] ubl4nk#1934
+could you explain more clear
+
+
+[03/29/2023 22:50] ubl4nk#1934
+ok i got
+
+
+[03/29/2023 22:50] Franfran#5067
+You're right, they could have used the "amount" but for consistency reasons they didn't. The function is called `ethPerDerivative`, implying there is only One derivative token
+
+
+[03/29/2023 22:51] ubl4nk#1934
+RocketPool has a limitation that each account can not deposit unlimited eth
+
+
+[03/29/2023 22:51] ubl4nk#1934
+am i right ?
+
+
+[03/29/2023 22:51] Franfran#5067
+yeap
+
+
+[03/29/2023 22:51] 0xtraub
+yes 5000 is the max
+
+
+[03/29/2023 22:51] 0xtraub
+and the min is 0.1
+
+
+[03/29/2023 22:51] ubl4nk#1934
+OK thanks guys
+
+
+[03/29/2023 22:51] 0xtraub
+but I think thats per individual call
+
+
+[03/29/2023 22:51] 0xtraub
+not total
+
+
+[03/29/2023 22:52] ubl4nk#1934
+let me google it
+
+{Reactions}
+👍 
+
+[03/29/2023 22:52] 0xtraub
+lmk
+
+
+[03/29/2023 22:54] 0xtraub
+i know centralization risks are out of scope but are other issues in the onlyOwner tagged functions acceptable?
+
+
+[03/29/2023 22:57] ubl4nk#1934
+What is the maximum deposit?
+I’ll save you another scroll, there is no limit.
+
+
+[03/29/2023 22:57] ubl4nk#1934
+what does it mean ?😂
+
+
+[03/29/2023 22:57] ubl4nk#1934
+i copied this text from their page
+
+
+[03/29/2023 22:58] 0xtraub
+i mean `rocketDAOProtocolSettingsDeposit.getMaximumDepositPoolSize()` is a valid function
+
+
+[03/29/2023 22:58] 0xtraub
+i checked
+
+
+[03/29/2023 22:58] 0xtraub
+and it returns 5000 eth
+
+
+[03/29/2023 22:58] ubl4nk#1934
+` rocketDepositPool.getBalance()` what will return ?
+
+
+[03/29/2023 23:01] ubl4nk#1934
+ok it returns 5000000000000000000000
+
+
+[03/29/2023 23:02] ubl4nk#1934
+but am not sure exactly
+
+
+[03/29/2023 23:03] ubl4nk#1934
+could you explain a bit about the `centralization risks` ? what types of risks they are
+
+
+[03/29/2023 23:04] 0xtraub
+like bad things that could happen if the owner of the contract decided to go rogue or was compromised
+
+{Reactions}
+👍 (2) 
+
+[03/29/2023 23:04] 0xtraub
+for example like pausing the contract and then renouncing ownership would render it unusable forever.
+
+
+[03/30/2023 03:24] gjaldon
+For what it’s worth, my question about centralization risks was not related to this contest 😅😁
+
+{Reactions}
+😂 (3) 
+
+[03/30/2023 03:26] aga7hokakological
+rebalanceToWeights () what are the rare conditions in which it'll be called?
+
+
+[03/30/2023 03:27] aga7hokakological
+When adding new derivative?
+
+
+[03/30/2023 03:29] aga7hokakological
+When eth is divided amongst these derivatives each derivative has its own wrapped token which is getting minted to this contract right?
+
+
+[03/30/2023 07:14] road220
+RocketPool doesn't have any upper limits for individual deposits.
+
+
+[03/30/2023 07:22] road220
+Currently, RocketPool is busy. Only validators submit deposits via flashbots bundles by creating minipools. That amount is used to check whether it passes the following checks. And this check has nothing to do with the upper limit check per deposit.
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/Screenshot_2023-03-30_at_10.20.10-73CD5.png
+
+
+[03/30/2023 07:23] road220
+https://docs.rocketpool.net/overview/faq/#general
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/Screenshot_2023-03-30_at_10.23.19-2E274.png
+
+
+[03/30/2023 07:26] road220
+Edge case on that is prob a medium already 🙂
+
+
+[03/30/2023 07:39] aga7hokakological
+Maybe can't think of anything particular there
+
+
+[03/30/2023 10:13] 0xsorrynotsorry
+Dear fellow wardens, please try to avoid discussing your findings untill the contest report is published. Thank you.
+
+{Reactions}
+👍 (4) 
+
+[03/30/2023 10:19] _oceansky
+Hi @Toshi kindly check dm thanks
+
+{Reactions}
+👀 
+
+[03/30/2023 10:35] jokr7251
+Hi @Toshi Could you please check my dm?
+
+{Reactions}
+👀 
+
+[03/30/2023 10:59] parsely.
+Hi @Toshi Please may I ask if you could check my DM as well please?
+
+{Reactions}
+👀 
+
+[03/30/2023 11:18] jokr7251
+@here Any admin to clarify few doubts on code?
+
+
+[03/30/2023 12:04] loserdavictor
+```address public constant WST_ETH =
+        0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0;
+    address public constant LIDO_CRV_POOL =
+        0xDC24316b9AE028F1497c275EB9192a3Ea0f67022;
+    address public constant STETH_TOKEN =
+        0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84;```
+can some one explain me the role of these three, 
+https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/WstEth.sol#L13 
+
+the first one is erc_20 wrapped_eth the second one is lido_pool but third one? like clarify the roles a little
+
+
+[03/30/2023 12:06] road220
+it's not a role, it's the address of the stETH
+
+
+[03/30/2023 12:06] loserdavictor
+the role of that address
+
+
+[03/30/2023 12:09] co0nan
+when unwrap called, it exchange WST_ETH for SftETH, this address simple holds the contract balance of SftETH. It then approves the LIDO pool to spend it in order to exchange it for ETH.
+
+{Reactions}
+🔥 (2) 
+
+[03/30/2023 12:09] road220
+gotcha! 
+stETH is rebasable token, therefore dapps should operate with wstETH in order to hold some balances etc... 
+If you look into the function withdraw(), u'll see that it first unwraps some wstETH and then performs a swap in stETH/ETH pool on curve.
+
+{Reactions}
+✅ (3) 
+
+[03/30/2023 12:10] road220
+If Asymmetry didn't implement this mechanism with unwrapping, users would lose their rewards occurred over the time.
+
+
+[03/30/2023 12:11] loserdavictor
+yep, i saw that and i also saw that we are using pool in deposit and withdraw and more things so it was sus 🙂
+
+
+[03/30/2023 12:16] parsely.
+Hi @Toshi apologies, you can ignore my request, I deleted the message.
+
+{Reactions}
+nice 👏 
+
+[03/30/2023 13:57] loserdavictor
+i don't think so because mint() is only happening in stake() and SafEth is minted,  but when rebalanceToWeights() called the contract unstakes everything and so has eth in its balance and then restakes but instead of going via stake() route, it just runs for loop... 
+
+correct me if i am wrong?🐧 🐧
+
+
+[03/30/2023 15:38] alexczm
+Hi @Toshi, kindly check DM. ty!
+
+
+[03/30/2023 16:12] aga7hokakological
+What I meant is stake() -> rocketpool derivative (mints it's wrapped token) to the safEth -> safEth mints it's wrapped token to user
+
+{Reactions}
+👍 
+
+[03/30/2023 17:30] loserdavictor
+https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/Reth.sol#L108 i wonder when the contract burn's the token, does it send the amount burned in terms of eth to the msg.sender? 
+because there was no overridden function 
+
+https://etherscan.io/address/0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46#code
+
+
+[03/30/2023 17:35] aga7hokakological
+why burnt amount will be sent to msg.sender? Here for Reth, sfrx, wst the msg.sender is safEth contract
+
+
+[03/30/2023 17:39] 0xepley
+hello, its my first audit, its written submit gas optimisation as one report, what they mean by that and how to submit as one repot,
+
+
+[03/30/2023 17:39] loserdavictor
+yep, i mean the msg.sender is contract will the eth transfer after withdraw() as i linked on github as the withdraw() internally burn() and so i assume the amount of eth won't be sent to safEth contract since there is no burn() overridden, it uses the generic one
+
+
+[03/30/2023 17:40] 0xepley
+@Toshi help me maalik
+
+
+[03/30/2023 17:40] loserdavictor
+1.
+2.
+3.
+this way if you have 3 gas findings... i did similar in first audit
+
+
+[03/30/2023 17:41] aga7hokakological
+```
+ (bool sent, ) = address(msg.sender).call{value: address(this).balance}("");
+```
+This line does its work
+
+
+[03/30/2023 17:41] to_sh_i_
+This is not the same contract, burn is rETH's withdraw function
+
+
+[03/30/2023 17:42] aga7hokakological
+You can just submit the gas optimizations number wise in markdown format
+
+{Reactions}
+☝️ 
+
+[03/30/2023 17:42] 0xepley
+what about code4rena submission template, is it for high and med?
+
+
+[03/30/2023 17:43] loserdavictor
+submit high and med individually and ga and gas opt in bunches
+
+
+[03/30/2023 17:44] loserdavictor
+i copied the address from https://github.com/code-423n4/2023-03-asymmetry/blob/main/contracts/SafEth/derivatives/Reth.sol#L21
+
+
+[03/30/2023 17:44] to_sh_i_
+https://etherscan.io/token/0xae78736cd615f374d3085123a210448e74fc6393#writeContract
+
+{Embed}
+https://etherscan.io/token/0xae78736cd615f374d3085123a210448e74fc6393
+Rocket Pool ETH (rETH) Token Tracker | Etherscan
+Rocket Pool ETH (rETH) Token Tracker on Etherscan shows the price of the Token $1,892.32, total supply 216,546.916776976708709502, number of holders 10,894 and updated information of the token. The token tracker page also shows the analytics and historical data.
+
+
+[03/30/2023 17:44] co0nan
+Here is implementation of rETH https://etherscan.io/address/0xae78736Cd615f374D3085123A210448E74Fc6393#code
+
+
+[03/30/2023 17:44] to_sh_i_
+that address isn't used for the burn function.  That's the address to get other addresses in the system
+
+
+[03/30/2023 17:44] co0nan
+```
+function burn(uint256 _rethAmount) override external {
+        // Check rETH amount
+        require(_rethAmount > 0, "Invalid token burn amount");
+        require(balanceOf(msg.sender) >= _rethAmount, "Insufficient rETH balance");
+        // Get ETH amount
+        uint256 ethAmount = getEthValue(_rethAmount);
+        // Get & check ETH balance
+        uint256 ethBalance = getTotalCollateral();
+        require(ethBalance >= ethAmount, "Insufficient ETH balance for exchange");
+        // Update balance & supply
+        _burn(msg.sender, _rethAmount);
+        // Withdraw ETH from deposit pool if required
+        withdrawDepositCollateral(ethAmount);
+        // Transfer ETH to sender
+        msg.sender.transfer(ethAmount);
+        // Emit tokens burned event
+        emit TokensBurned(msg.sender, _rethAmount, ethAmount, block.timestamp);
+    }
+
+```
+
+
+[03/30/2023 17:46] loserdavictor
+okay, i get it, thanks
+
+
+[03/30/2023 17:48] codingnamekiki
+Toshi excited to see the findings
+
+{Reactions}
+AF AF 
+
+[03/30/2023 17:48] codingnamekiki
+:PU_FeelsBongoMan:
+
+
+[03/30/2023 17:49] rebase3763
+not sure if it's directly related to the contest, but submitted report is not showing up under "Your Finding" although I got the email confirmation. Tagging @Jay | C4
+
+
+[03/30/2023 17:51] loserdavictor
+this is the new c4 website, if you got the email, it is probably submitted, mention a mod or admin if you want to edit...
+
+{Reactions}
+☑️ 
+
+[03/30/2023 18:00] itsmetechjay
+Please submit a help desk request if you need help confirming the finding.
+
+{Reactions}
+☑️ 
+
+[03/30/2023 18:19] cloudellie
+Can you let us know if you are continuing to have this issue? We're investigating, but it's possible that it's a timeout error as it seems to be intermittent.
+
+
+[03/30/2023 18:47] codingnamekiki
+works for me
+
+{Reactions}
+thankyou 
+
+[03/30/2023 18:51] epikt1tus
+@Jay | C4 @CloudEllie im having the same issue. after submitting a finding it still says "No findings submitted for this contest" under Your Findings
+
+
+[03/30/2023 18:52] cloudellie
+OK - would suggest that you re-submit the edited finding as a new submission, and include a note to indicate the older version should be withdrawn.
+
+
+[03/30/2023 18:53] cloudellie
+Oh I guess that won't work for Gas & QA reports. 🤔
+
+
+[03/30/2023 18:53] epikt1tus
+ok, ive submitted the same finding twice now, and it still isn't showing up.. should i submit a 3rd time?
+
+
+[03/30/2023 18:53] kowalski_analysis
+Yeah I wanted to update my finding but no hope :/
+
+
+[03/30/2023 18:53] cloudellie
+Have you received an email confirmation?
+
+
+[03/30/2023 18:53] epikt1tus
+yes i have
+
+
+[03/30/2023 18:53] cloudellie
+K, then it's in the repo and you're good
+
+
+[03/30/2023 18:54] epikt1tus
+ok, thx
+
+
+[03/30/2023 18:54] rebase3763
+it looks like the new version is not being accepted, I'm getting ```It looks like you've already submitted a QA (Quality Assurance) report for this contest.```
+
+
+[03/30/2023 18:54] cloudellie
+I understand that it's frustrating not to have the on-screen confirmation -- we are looking into that -- but from what we are seeing in the findings repo the submission form is working fine.
+
+{Reactions}
+☑️ 
+
+[03/30/2023 18:55] rebase3763
+I also received email confirmation for the very first submission, although consecutive updates are being rejected (which from what I remember should be allowed until the contest is full closed)
+
+
+[03/30/2023 18:55] cloudellie
+Yes, sorry - the form will limit you to just one submission if the type of report is QA or Gas. I'm asking our dev team what we can suggest here.
+
+
+[03/30/2023 19:16] wastewa
+@CloudEllie I think i accidentally submitted something twice then because front end was showing no submissions
+
+{Reactions}
+👀 👍 thankyou 
+
+[03/30/2023 19:16] wastewa
+just a warning
+
+
+[03/30/2023 19:16] wastewa
+I didn't mean to submit twice 🙈
+
+
+[03/30/2023 19:16] itsmetechjay (pinned)
+@🐺wardens If you are unable to view/edit your submissions AND you need to edit a QA or Gas report, C4 staff can help, but we'll need your support as participation in this contest is very high! 
+
+** 🙏   Please only take these steps if you need to make significant edits. There's no need to edit minor typos, etc. as those are not factored into judging.**
+
+- Save your final QA/Gas report as a .md file
+- Email the file to submissions@code423n4.com before contest close at  20:00:00
+❗ **Be sure to include your C4 username** so we can attach your report to the correct submission.
+
+This is a manual process so please be patient with us. We'll need time to process emailed submissions. Thank you!
+
+{Reactions}
+☑️ 
+
+[03/30/2023 19:17] cloudellie
+just making sure you see this ^^
+
+
+[03/30/2023 19:18] 0xepley
+how can we view our submissions
+
+
+[03/30/2023 19:18] rebase3763
+emails?
+
+
+[03/30/2023 19:18] 0xepley
+is there any other way?
+
+
+[03/30/2023 19:18] wastewa
+yeah, the emails still work
+
+
+[03/30/2023 19:19] cloudellie
+If you look at the contest page, there should be a "Your Findings" tab where your submissions should show up.
+
+
+[03/30/2023 19:19] cloudellie
+https://code4rena.com/contests/2023-03-asymmetry-contest
+
+{Embed}
+https://code4rena.com/contests/2023-03-asymmetry-contest
+Code4rena Asymmetry contest
+$49,200 USDC
+24 March 2023—30 March 2023
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/c4-og-banner-0FCFA.png
+
+
+[03/30/2023 19:19] chaindev
+no problem on H/M ?
+
+
+[03/30/2023 19:20] cloudellie
+H/M submissions can just be resubmitted if necessary. We'd ask that wardens be thoughtful and not spam the form for the sake of correcting typos, etc.
+
+{Reactions}
+👍 (2) 
+
+[03/30/2023 19:20] cloudellie
+Submitting many similar versions of the same finding will create a LOT of extra work for the Lookout and Judge, so please be considerate about it! 🙏
+
+
+[03/30/2023 19:22] liveactionllamac4
+Pinned a message.
+
+{Reactions}
+thankyou (2) 
+
+[03/30/2023 19:31] evokid
+Nice contest I enjoyed it 👍🏻
+
+
+[03/30/2023 19:35] kartoonjoy
+@0xJack please accept my friend request ASAP regarding your findings for this contest. Thanks!
+
+
+[03/30/2023 19:37] kartoonjoy
+@rebase can you DM me please?
+
+{Reactions}
+☑️ 
+
+[03/30/2023 19:43] chrisapostolov
+Great contest!
+
+
+[03/30/2023 19:45] codingnamekiki
+:10_10:
+
+
+[03/30/2023 19:45] nemveer
+All the best to all the participants! :C4Keycap:
+
+{Reactions}
+same 
+
+[03/30/2023 19:46] 0xsalt#5798
+Thanks!
+
+
+[03/30/2023 19:46] 0xsalt#5798
+On to the next one
+
+
+[03/30/2023 19:53] road220
+However, I received emails upon submitting, is it a UI bug or smth? 🙂
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/Screenshot_2023-03-30_at_22.52.06-E34BF.png
+
+
+[03/30/2023 19:53] liveactionllamac4
+Yeah, our dev team is looking into this (some discussion above and in pinned msgs). If you received the confirmation emails though, you should be good! 🙂
+
+{Reactions}
+❤️ thankyou 
+
+[03/30/2023 19:54] road220
+Thanks a lot, @Toshi, for your support! Wish you all the best upon integrating EIP-4895!
+
+{Reactions}
+👏 (2) 
+
+[03/30/2023 19:55] codingnamekiki
+Odd, it does work for me tho
+
+
+[03/30/2023 19:55] codingnamekiki
+:PU_pepeThinkBaguette:
+
+
+[03/30/2023 19:59] cloudellie
+Yes, some wardens have reported the same problem. We’re investigating. But if you got an email confirmation then your submission was received.
+
+{Reactions}
+❤️ 
+
+[03/30/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Asymmetry Finance** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest Admin if you have questions along the way!
+
+{Reactions}
+596058680408145921 (25) 👍 (18) chefskiss (9) 🫡 (7) 
+
+[03/30/2023 20:02] ernestognw
+Gg everyone!
+
+{Reactions}
+👍 (3) 
+
+[03/30/2023 20:03] 0xkazimm
+Thanks to @Toshi  for his help the codebase was great 👍🏻
+
+{Reactions}
+➕ (4) 👏 (3) 👍 (3) 
+
+[03/30/2023 20:03] ladboy233
+https://tenor.com/view/lets-go-gif-22712392
+
+{Embed}
+https://tenor.com/view/lets-go-gif-22712392
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/lets-go-A9090.png
+
+{Reactions}
+💯 (2) 
+
+[03/30/2023 20:04] codingnamekiki
+:pepemexican:
+
+
+[03/30/2023 20:04] contagiante
+Gj everyone this is my second contest after ethos i really enjoyed it code was solid 👊
+
+
+[03/30/2023 20:04] 0xepley
+bro roza rakha?
+
+
+[03/30/2023 20:05] 0xkazimm
+?!
+
+
+[03/30/2023 20:06] 0xepley
+where are you from? i'm following you in twitter
+
+
+[03/30/2023 20:06] Cryptor#9119
+Contest should have been shorter considering how small the codebase was
+
+
+[03/30/2023 20:06] codingnamekiki
+Small but solid
+
+
+[03/30/2023 20:06] codingnamekiki
+:cheers_badger:
+
+
+[03/30/2023 20:06] co0nan
+imagine missing a High risk on such a small codebase lol
+
+{Reactions}
+👀 (8) 
+
+[03/30/2023 20:13] flyingdev
+Great
+
+
+[03/30/2023 20:27] kartoonjoy
+@ulas can you accept my friend request, please?
+
+{Reactions}
+👍 
+
+[03/30/2023 20:33] eme0242
+Really tight codebase🤝
+Any h/ms?
+
+
+[03/30/2023 20:34] igingu
+Thank you @Toshi , all the help was much appreciated!
+
+{Reactions}
+👆 (11) AF (2) 
+
+[03/30/2023 23:45] 0xsmartcontractsamurai
+Small codebase with one of the highest rates of errors/bugs I've seen...
+However, this was only my 3rd audit contest... so my opinion might be biased...
+
+
+[03/31/2023 03:55] aga7hokakological
+You mean h/m?
+
+
+[03/31/2023 04:17] 0xffchain
+Curious about this too.
+
+
+[03/31/2023 04:22] coffiasd
+I think this project is very dangerous
+
+
+[03/31/2023 04:25] coffiasd
+The owner can add a new derivative and easily move all funds included in the contract to the new derivative. If the new derivative is an attack contract, investors' money will be lost entirely
+
+
+[03/31/2023 04:28] coffiasd
+Just a personal opinion ,  Don't mind me ..
+
+
+[03/31/2023 04:39] sockdrawermoney
+@ayden @0xSmartContractSamurai we don't discuss bugs and we respect sponsors' work. we let the audit do the work.
+
+{Reactions}
+👍 (7) 
+
+[03/31/2023 04:40] sockdrawermoney
+thanks all 🙂
+
+
+[03/31/2023 04:40] coffiasd
+ok
+
+
+[03/31/2023 04:41] climber2002#7916
+Usually how long the report can come out? Thanks
+
+
+[03/31/2023 04:44] sockdrawermoney
+you can see the target goals for various checkpoints here. https://discord.com/channels/810916927919620096/852275457847722014/1085662034781282317
+
+
+[03/31/2023 04:44] sockdrawermoney
+lots of variables and different phases in play.
+
+{Reactions}
+🙏 (5) 
+
+[03/31/2023 06:33] 0xepley
+is there any way we can see others findings?
+
+
+[03/31/2023 07:17] redtiger_auditor
+How to access this Channel please ? I
+
+
+[03/31/2023 09:11] chalex.eth
+I submitted some findings should I see something on my codearena page ? or on the repo for the contest ?
+
+
+[03/31/2023 10:01] kartoonjoy
+you should have received an email acknowledging receipt. Then when the report for the contest is posted in a few weeks, you'll be able to see how you did.
+
+
+[03/31/2023 11:25] evokid
+the project owners need to fix them first
+
+
+[03/31/2023 15:33] 019ec6e2
+Hm, I didn't receive an email despite seeing my submission in Findings during the contest
+
+
+[04/01/2023 10:05] road220
+For whoever is judging this contest I can offer up to 30% of my shares(there is a minimum payout of $500, if 30% < $500) for delivering some ambiguities on my submissions from github directly to me. I would love to help to resolve any confusions occurred over the time. I'm sorry @🧦 sockdrawer | C4 , i don't have any other opportunities to get +backstage because of this: https://discord.com/channels/810916927919620096/810931711609143326/1082437741586960485 and having no opportunity for something like that, seems not reasonable 😦
+
+{Reactions}
+👀 (8) 
+
+[04/04/2023 18:26] 0xnirlin
+wen result
+
+
+[04/04/2023 23:51] 0xsurena
+https://tenor.com/view/hang-first-time-smiles-gif-14991372
+
+{Embed}
+https://tenor.com/view/hang-first-time-smiles-gif-14991372
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/hang-first-time-A13A3.png
+
+{Reactions}
+😂 (36) 🔥 
+
+[04/05/2023 12:22] pandadefi
+Don't expect results in April I would guess end of May
+
+{Reactions}
+PU_HyperOmega (2) 
+
+[04/05/2023 12:31] co0nan
+Too far, the audit timeline was just 6 days, probably result will be out by mid of April
+
+
+[04/05/2023 13:26] 0xnirlin
+no i will expect may 2024
+
+
+[04/05/2023 16:45] 0xnirlin
+was kidding, btw codebase was small, i think will not talk much time
+
+{Reactions}
+cat 👀 
+
+[04/05/2023 16:45] 0xnirlin
+hell yeah :hi5: '
+
+{Reactions}
+👍 
+
+[04/10/2023 19:27] 0xepley
+Wen results
+
+{Reactions}
+👀 
+
+[04/10/2023 20:05] 0xnirlin
+https://tenor.com/view/first-time-meme-first-time-the-ballad-of-buster-scruggs-gif-24656975
+
+{Embed}
+https://tenor.com/view/first-time-meme-first-time-the-ballad-of-buster-scruggs-gif-24656975
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/first-time-meme-first-time-0A324.png
+
+{Reactions}
+😂 (10) 
+
+[04/10/2023 23:02] ladboy233
+https://tenor.com/view/first-time-ever-sheamus-stephen-farrelly-celtic-warrior-workouts-for-the-first-time-gif-18176449
+
+{Embed}
+https://tenor.com/view/first-time-ever-sheamus-stephen-farrelly-celtic-warrior-workouts-for-the-first-time-gif-18176449
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/first-time-ever-sheamus-A90D9.png
+
+{Reactions}
+10_10 (7) 
+
+[04/12/2023 01:15] 0xsmartcontractsamurai
+https://tenor.com/view/tohru-adachi-persona4-persona-p4-when-you-gif-21479772
+
+{Embed}
+https://tenor.com/view/tohru-adachi-persona4-persona-p4-when-you-gif-21479772
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/tohru-adachi-persona4-03E1A.png
+
+
+[04/13/2023 01:30] coffiasd
+chill
+
+
+[04/13/2023 08:07] 0xsurena
+it’s not possible to see first results? 👀👀👀
+
+
+[04/13/2023 10:42] ladboy233
+at least a month
+
+{Reactions}
+🥲 (10) 
+
+[04/13/2023 20:04] 0xepley
+woahhhhhhhhhh!!!!
+
+{Reactions}
+😁 (2) 
+
+[04/14/2023 17:54] slvdev
+And it’s optimistic. It depends on project complexity and amount of findings (since most of them false positive). It the end on 2022 waiting time in 2 months was normal.
+
+
+[04/14/2023 23:12] Cryptor#9119
+A month would be a miracle. Remember it was the only active contest running at the time on C4. And the codebase was very small. That means a ton of submissions from auditors with nothing else to do, and unfortunately lower payouts
+
+
+[04/15/2023 06:50] devabdee
+Good for the Protocol team & Community 🔥
+
+
+[04/15/2023 16:51] 0xepley
+WENNNNNNNNNNNNNNNNNN RESULTSSSSSSSSSSSSSSSSSSSSSSSSS
+
+{Reactions}
+😂 (7) C4Keycap 
+
+[04/15/2023 16:51] 0xepley
+@nirlin
+
+
+[04/15/2023 17:09] 0xnirlin
+Am i judge or something on code4rena now?
+
+{Reactions}
+😂 (5) 
+
+[04/15/2023 20:40] 0xsurena
+last person who said this, got removed from contest 👀
+
+{Reactions}
+4739_Skeletor (3) 😂 (6) 
+
+[04/17/2023 22:07] redtiger_auditor
+Woohoo the audit  is in the Judging phase  !
+
+
+[04/18/2023 06:06] 0xepley
+since the start of time, lmao
+
+
+[04/18/2023 07:15] pfapostol
+it was in pre-sort stage before
+
+
+[04/18/2023 07:15] 0xepley
+how do one knows, in which stage the audit is?
+
+
+[04/18/2023 07:56] redtiger_auditor
+Look for the annoucements posts every monday : https://discord.com/channels/810916927919620096/810929015509483554/1097611646207283270
+
+{Reactions}
+hi5 (3) 
+
+[04/19/2023 01:34] redtiger_auditor
+Does anyone has an estimate of how much long will it take for the results? 😀
+
+
+[04/19/2023 04:48] pfapostol
+I estimate that somewhere after 20-25 of the same questions
+
+{Reactions}
+😂 (11) 
+
+[04/19/2023 22:19] 0xsurena
+https://tenor.com/view/get-ready-canadas-got-talent-are-you-ready-are-you-prepared-citytv-gif-25186734
+
+{Embed}
+https://tenor.com/view/get-ready-canadas-got-talent-are-you-ready-are-you-prepared-citytv-gif-25186734
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/get-ready-canadas-got-talent-50474.png
+
+{Reactions}
+10_10 
+
+[04/20/2023 05:55] 0xnirlin
+Are you telling this to me or yourself?:thisisfine:
+
+{Reactions}
+🤣 (3) 
+
+[04/23/2023 05:37] 0xnirlin
+https://tenor.com/view/oogway-my-time-has-come-gif-8019684
+
+{Embed}
+https://tenor.com/view/oogway-my-time-has-come-gif-8019684
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/oogway-my-time-has-come-380DA.png
+
+
+[04/23/2023 05:45] shubh0412
+https://tenor.com/view/the-batman-take-care-of-yourself-take-care-bruce-wayne-robert-pattinson-gif-25683567
+
+{Embed}
+https://tenor.com/view/the-batman-take-care-of-yourself-take-care-bruce-wayne-robert-pattinson-gif-25683567
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/the-batman-take-care-of-yourself-8691E.png
+
+
+[04/23/2023 06:57] coffiasd
+:C4Keycap:
+
+
+[04/23/2023 09:39] 0xepley
+https://tenor.com/view/dies-dead-kermit-dies-pinguman-dies-mikefoster-dies-gif-25965824
+
+{Embed}
+https://tenor.com/view/dies-dead-kermit-dies-pinguman-dies-mikefoster-dies-gif-25965824
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/dies-dead-1B601.png
+
+{Reactions}
+😂 (7) 👀 (3) 10_10 thisisfine 
+
+[04/25/2023 08:47] B.marouen#0502
+Today 👀
+
+
+[04/25/2023 08:56] redtiger_auditor
+Do you have inside information 🙂 ?
+
+
+[04/25/2023 09:00] redtiger_auditor
+Hello Mr Contest Admin :). Do you have an ETA for the results please ?
+
+
+[04/25/2023 09:10] 0xnirlin
+Is is in judging phase from last week, can expect in this week maybe.
+
+
+[04/25/2023 09:52] B.marouen#0502
+no, but i can feel it hhhhh
+
+{Reactions}
+🤜 (2) 🤣 (3) 
+
+[04/25/2023 09:55] B.marouen#0502
+i can see that it's your first contest too 
+Hopefully we will get a @ soon :p
+
+{Reactions}
+✌️ 
+
+[04/25/2023 18:02] 0xnirlin
+imagine forgetting to submit one
+
+
+[04/25/2023 18:12] co0nan
+I saw mention notification and thought it’s the result
+
+
+[04/25/2023 18:13] 0xnirlin
+bamboozled
+
+
+[04/26/2023 10:33] 0xepley
+😂
+
+
+[04/26/2023 11:12] hex_sadeeq
+Three weeks to go
+
+
+[04/26/2023 11:58] igingu
+Probably in the weekend or Monday/Tuesday, rewards will be anounced, and report might take 1-2 more weeks
+
+
+[04/26/2023 12:02] redtiger_auditor
+Why do you say this ?
+
+
+[04/26/2023 12:03] igingu
+Just a guess, given how long ago the audit started judging
+
+
+[04/26/2023 12:04] redtiger_auditor
+Ok let's hope it will be soon
+
+
+[04/26/2023 18:38] devabdee
+Guys be patient. It's not even been a month since the contest ended. Results usually take 1-2 months, so chill out. Many guys find this behavior annoying. And the fact is, this doesn't speeds up the judging process lol. That's why you will never find any senior doing this.
+https://discord.com/channels/810916927919620096/824698635815223316/1078288077421822062
+
+{Reactions}
+👆🏼 (8) 👍 (9) 
+
+[04/27/2023 10:12] 0xepley
+wen results 😂
+
+{Reactions}
+👎 (13) 😀 (4) 🤡 (6) 😂 (4) 10_10 (2) 4739_Skeletor (2) 🇵🇰 (2) 
+
+[04/27/2023 13:02] 0xsurena
+Man ! focus on other contests, learn and practice more 🙃
+
+{Reactions}
+👍 (5) 
+
+[04/28/2023 15:15] 0xnirlin
+Chill bro, i remember your eye emojis too 😂
+
+{Reactions}
+👀 (2) 😂 (2) 
+
+[04/29/2023 02:40] 0xwagmi
+imagine getting rejected 🥺
+
+
+[04/29/2023 15:43] loserdavictor
+imagine spamming for contest challenges for results to get $ and getting 0🐧 🐧
+
+{Reactions}
+thisisfine (2) 🔥 (2) 👆 
+
+[05/01/2023 15:25] to_sh_i_
+So much spam in this contest 😦
+
+{Reactions}
+🐧 
+
+[05/01/2023 15:54] redtiger_auditor
+In the vulnerabilites  submitted ?  Or  this chat 😁 ?
+
+
+[05/01/2023 15:55] to_sh_i_
+In the vulnerabilities submitted
+
+
+[05/01/2023 16:13] redtiger_auditor
+Oh ... Hope you found usefull stuff to fix...
+
+{Reactions}
+💯 
+
+[05/01/2023 16:14] to_sh_i_
+Absolutely!  Just had to dig to find it
+
+{Reactions}
+🤜 (5) 
+
+[05/01/2023 18:20] 0xnirlin
+Will the results be announced this week or have to wait a bit?
+
+{Reactions}
+👍🏻 
+
+[05/01/2023 18:52] codingnamekiki
+👀
+
+
+[05/01/2023 19:27] liveactionllamac4
+:code4rena: 💸 🎉 Awards for **Asymmetry**:
+
+$3,238.66 USDC » @d3e4
+$1,540.52 USDC » @adriro
+$1,363.10 USDC » @whoismatthewmc1 
+$1,337.38 USDC » @0x52
+$1,057.64 USDC » @m_Rassska
+$988.39 USDC » @T1MOH
+$969.38 USDC » @Tricko 
+$766.19 USDC » @anodaram
+$762.37 USDC » @rvierdiiev
+$749.96 USDC » yac (@t4k, @Peep, @thebensams, @++devtooligan, @blockdev, @usmannk, @sjkelleyjr, @thraull, @NibblerExpress, @engn33r, @prady, & @panda)
+$734.24 USDC » @cloudjunky 
+$734.24 USDC » @hassan-truscova 
+$722.46 USDC » @shaka
+$632.86 USDC » @HollaDieWaldfee
+$551.10 USDC » @rbserver
+$503.72 USDC » @lukris02
+$503.55 USDC » @peanuts
+$447.73 USDC » @koxuan 
+$412.59 USDC » @Ruhum
+$369.20 USDC » @0Kage 
+$298.42 USDC » @RedTiger Auditor 
+$298.05 USDC » @bauer6009 
+$297.72 USDC » @igingu
+$286.81 USDC » @lucyoa
+$265.95 USDC » @dec3ntraliz3d
+$262.21 USDC » @carrotsmuggler
+$249.62 USDC » @qpzm
+$236.49 USDC » @joestakey
+$224.11 USDC » @MiloTruck
+$222.85 USDC » @Cryptor
+$210.36 USDC » @RaymondFam
+$209.86 USDC » @ToonVH
+$208.37 USDC » @0xRobocop 
+$208.22 USDC » @IgorZuk
+$206.06 USDC » @HHK 
+$194.68 USDC » @0xladboy | Sparkware
+$176.58 USDC » @Kiki 
+$176.01 USDC » @deliriusz
+$166.09 USDC » @Franfran
+$164.96 USDC » @Rotcivegaf
+$162.62 USDC » @Co0nan
+$160.03 USDC » @Rolezn
+$142.11 USDC » @0xnev 
+$141.98 USDC » @Bahurum
+$132.80 USDC » @Sathish9098 
+$132.80 USDC » @0xSmartContract 
+$132.80 USDC » @c3phas
+$118.64 USDC » @brgltd 
+$116.33 USDC » @tnevler
+$115.63 USDC » @Haipls
+$107.56 USDC » @J4de
+$102.48 USDC » @bin2chen
+$101.00 USDC » @0xAgro
+$98.95 USDC » BPZ (@zinc42, @Bitcoinfever244, & @PrasadLak)
+$94.45 USDC » @gjaldon
+$94.45 USDC » @Moliholy 
+$91.21 USDC » @silviaxyz 
+$90.97 USDC » @0xbepresent 
+$90.74 USDC » @web3creed
+$90.74 USDC » @JCN
+$89.40 USDC » @latt1ce 
+$85.95 USDC » @0xepley
+$84.81 USDC » @giovannidisiena
+$84.11 USDC » @jasonxiale
+$82.93 USDC » @juancito
+$81.46 USDC » @madwookie
+$81.32 USDC » @ast3ros
+$81.32 USDC » @Slippopz 
+$81.32 USDC » @0xd1r4cde17a 
+$79.44 USDC » @neumo
+$72.07 USDC » @DadeKuma
+$70.83 USDC » @bytes032
+$70.11 USDC » @Parad0x
+$67.34 USDC » @Kaden
+$64.11 USDC » @carlitox477 
+$63.98 USDC » @alexzoid
+$61.76 USDC » @0xkazim
+$61.59 USDC » UdarTeam (@AhmeT & @tourist)
+$61.46 USDC » @hihen
+$58.94 USDC » @Stiglitz 
+$58.94 USDC » @DeStinE21 
+$58.94 USDC » @P7N8ZK 
+$54.02 USDC » @eyexploit
+$52.98 USDC » @ernestognw 
+$52.85 USDC » @larsson 
+$52.85 USDC » @fatherOfBlocks
+$52.85 USDC » @Udsen 
+$50.33 USDC » @hl_ 
+$49.04 USDC » @0xSurena
+$48.63 USDC » @cryptoThemeX 
+$48.63 USDC » @Matin
+$48.63 USDC » UniversalCrypto (@amaechi eth & @tettehnetworks)
+$45.31 USDC » @HandsomeGiraffe
+$42.60 USDC » @csanuragjain
+
+
+[05/01/2023 19:27] liveactionllamac4
+$42.20 USDC » CodeFoxInc ( @thurendous, @TerrierLover, & @retocrooman)
+$42.20 USDC » @shalaamum 
+$42.06 USDC » @btk 
+$42.06 USDC » @0xcatellatech 
+$42.06 USDC » @zzzitron
+$42.06 USDC » @Bloqarl
+$42.06 USDC » @tsvetanovv
+$42.06 USDC » @Josiah
+$42.06 USDC » @slvDev
+$41.60 USDC » @chaduke
+$40.64 USDC » @Polaris_tow
+$40.64 USDC » @fyvgsk 
+$40.64 USDC » @SadBase
+$40.64 USDC » @Breeje 
+$37.07 USDC » @volodya
+$35.05 USDC » ArbitraryExecution ( @jawn, @wanaks, @Alex Segura, @CodeBeholder, @WGMIApe, @pbwaffles, & @Yowl)
+$33.34 USDC » @0xMirce 
+$30.95 USDC » @SunSec
+$30.95 USDC » @aviggiano
+$30.81 USDC » @LeoGold 
+$28.81 USDC » @7siech 
+$28.80 USDC » @codeislight 
+$28.80 USDC » @cryptonue
+$27.89 USDC » @nemveer
+$27.41 USDC » @ICP 
+$25.66 USDC » @mahdiRostami 
+$24.89 USDC » @ck
+$24.26 USDC » @ayden
+$24.26 USDC » @vagrant
+$24.26 USDC » @evokid
+$24.05 USDC » @wen
+$23.92 USDC » @georgits
+$23.92 USDC » @ch0bu
+$23.92 USDC » @0x3b 
+$23.92 USDC » @codeslide
+$23.92 USDC » @arialblack14
+$23.92 USDC » @smaul 
+$23.92 USDC » @BlueAlder 
+$23.92 USDC » @inmarelibero 
+$23.92 USDC » @pixpi 
+$23.92 USDC » @Tedo
+$23.92 USDC » @Madalad
+$23.92 USDC » @code-cipher
+$23.92 USDC » @KrisApostolov 
+$23.92 USDC » @maxper 
+$23.92 USDC » @0xhacksmithh
+$22.21 USDC » @monrel
+$21.40 USDC » @lopotras 
+$21.40 USDC » @0xWaitress
+$21.17 USDC » @n33k 
+$21.16 USDC » @0xRajkumar 
+$17.68 USDC » @mojito_auditor
+$17.68 USDC » @adeolu
+$17.67 USDC » @Noam Yakov
+$17.67 USDC » @nadin
+$16.76 USDC » @Dug
+$16.62 USDC » @Brenzee 
+$16.62 USDC » @Koolex
+$15.67 USDC » @Emmanuel
+$13.27 USDC » @roelio 
+$13.27 USDC » @0xTraub 
+$13.27 USDC » @0xl51 
+$13.27 USDC » @Viktor_Cortess
+$13.13 USDC » @alejandrocovrr
+$13.13 USDC » @Englave
+$13.13 USDC » @climber2002 
+$13.13 USDC » @p_crypt0 
+$13.13 USDC » scokaf ( @Scoon & @jauvany)
+$13.13 USDC » @totomanov 
+$13.13 USDC » @tsar 
+$13.13 USDC » Wander ( @xAlismx, @ubl4nk, & @mahdikarimi)
+$13.13 USDC » @yudan 
+$13.13 USDC » @said
+$13.13 USDC » @0xNorman
+$13.13 USDC » @descharre
+$13.13 USDC » @0xadrii 
+$13.13 USDC » @CRYP70
+$13.13 USDC » @Ignite 
+$13.13 USDC » @dingo2077
+$13.13 USDC » @Rappie
+$13.13 USDC » @ks__xxxxx 
+$13.13 USDC » @Gde 
+$13.13 USDC » @Kaysoft
+$13.13 USDC » @navinavu 
+$13.13 USDC » @Brevis 
+$13.13 USDC » @deadrosesxyz
+$13.13 USDC » @PNS 
+$13.13 USDC » @0xGusMcCrae
+$13.13 USDC » @pipoca
+$13.13 USDC » @0xWagmi
+$13.13 USDC » @hklst4r 
+$13.13 USDC » @DevABDee 
+$13.13 USDC » @turvy_fuzz
+$13.13 USDC » @masa 
+$13.13 USDC » @Diana
+$13.13 USDC » @Jerry0x
+$13.13 USDC » @0xffchain 
+$13.13 USDC » @kartika
+$13.13 USDC » @3dgeville
+$13.13 USDC » @Koko1912
+
+{Reactions}
+🥳 (7) 
+
+[05/01/2023 19:27] liveactionllamac4
+$13.13 USDC » @Lavishq
+$13.13 USDC » @Helios 
+$13.13 USDC » @infect3d 
+$13.13 USDC » @favelanky
+$13.13 USDC » @ak1
+$11.76 USDC » @AkshaySrivastav
+$11.27 USDC » @wait
+$11.13 USDC » @0xc0ffEE 
+$11.13 USDC » @pfapostol
+$11.13 USDC » @codetilda 
+$11.13 USDC » @idkwhatimdoing 
+$10.92 USDC » @4lulz 
+$10.92 USDC » @tank 
+$10.79 USDC » 0xGordita
+$10.79 USDC » @MiniGlome (Mlome)
+$10.79 USDC » @ReyAdmirado
+$10.79 USDC » @Angry_Mustache_Man 
+$10.79 USDC » @0xpanicError 
+$10.79 USDC » @hunter_w3b
+$10.79 USDC » @EvanW
+$10.79 USDC » @MiksuJak 
+$10.74 USDC » @__141345__
+$8.84 USDC » @nonce
+$8.40 USDC » @Lirios
+$8.03 USDC » @sinarette 
+$4.68 USDC » @auditor0517 
+$4.54 USDC » @y1cunhui.eth 
+$3.63 USDC » @ulqiorra
+$3.49 USDC » @Krace 
+$3.49 USDC » @mert_eren 
+$3.49 USDC » @bart1e 
+$3.49 USDC » @aga7hokakological
+$3.49 USDC » @Vagner 
+$3.49 USDC » @sashik_eth 
+$3.49 USDC » @parsely
+$2.27 USDC » @ad3sh_ 
+$1.88 USDC » @0xfusion 
+$0.14 USDC » @chalex 
+$0.14 USDC » @a3yip6 
+$0.14 USDC » @fs0c
+$0.14 USDC » @019EC6E2
+$0.14 USDC » @banpaleo5 
+$0.14 USDC » @Shogoki 
+$0.14 USDC » @n1punp 
+$0.14 USDC » @teddav 
+$0.14 USDC » @Epikt1tus 
+$0.14 USDC » @shuklaayush 
+$0.14 USDC » @pontifex 
+$0.14 USDC » @Toshii
+$0.14 USDC » nowonder92
+$0.07 USDC » @top1st
+$0.07 USDC » @bearonbike 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 216 total, 8 unique
+Med risk findings: 144 total, 12 unique
+Gas reports: 55
+QA reports: 146
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+Note: If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.
+
+{Reactions}
+🎉 (18) 👏 (4) 👍 (3) 
+
+[05/01/2023 19:46] hunter_w3b
+What's the meaning of total and unique?
+
+
+[05/01/2023 19:52] eme0242
+In total, # UNIQUE findings were found, and a TOTAL of # wardens contributed
+
+{Reactions}
+👍 
+
+[05/01/2023 20:00] t1moh
+Wow first 3.9 digits
+
+{Reactions}
+😂 (2) hi5 (4) 
+
+[05/01/2023 20:07] matin6517
+- I have found 1 high and 1 medium absolutely will get a big piece of cake😋
+. 
+. 
+. 
+
+- Assymetry contest results are published:
+
+216 highs and 144 medium vulnerabilities have been found😑😂
+
+{Reactions}
+😂 (3) 
+
+[05/01/2023 20:07] rappie
+holy shit that is a lot, repect to the judges 🙂
+
+{Reactions}
+💯 (10) 
+
+[05/01/2023 20:15] t1moh
+How did you know your findings?
+
+
+[05/01/2023 20:16] matin6517
+Just assuming those got accepted😅
+
+
+[05/01/2023 20:33] alexczm
+Congrats to all who submitted valid findings! 
+Any chance to see what I submitted before report is made public?
+
+
+[05/01/2023 20:45] whoismatthewmc1
+This... is an unexpected development. Congrats everyone!
+Thank you C4, Asymmetry team, and judges!
+
+{Reactions}
+hi5 (3) 🔥 
+
+[05/01/2023 21:21] road220
+Congrats all! 
+Could anybody share the PR please? (can't find it)
+
+{Reactions}
+🔥 
+
+[05/01/2023 21:22] co0nan
+https://code4rena.com/contests/2023-03-asymmetry-contest
+
+You will find the number of reports accepted for each warden here
+
+
+[05/01/2023 21:24] road220
+but where's the PR?
+
+
+[05/01/2023 21:25] co0nan
+I don't know if its got public before the report. not sure about this process. what you look for anyway
+
+
+[05/01/2023 21:37] dadekuma
+let's gooo 72 USDC for a few highs and mediums 😂
+
+{Reactions}
+🥲 (3) hi5 (4) 
+
+[05/01/2023 21:39] dadekuma
+216 highs and 144 medium vulns, that's insane
+
+
+[05/01/2023 21:52] oualidpro#8727
+please I wasn't able to find my name in the list ... I am sure that at least the gas report was correct ... ? is there any problem with my submission ?
+
+
+[05/01/2023 21:58] oualidpro#8727
+please anyone can explain to me what was the problem with my submission ??
+
+
+[05/01/2023 22:00] dadekuma
+Most probably your report scored C, scores are relative to other reports. Your report must be better than the majority to have at least a B score
+
+
+[05/01/2023 22:02] oualidpro#8727
+but should the gas report include even the vulnerabilities that have been discovered by the automated scan ? to get a better score ?
+
+
+[05/01/2023 22:03] dadekuma
+no, those are ignored and not counted, you shouldn't include them
+
+
+[05/01/2023 22:07] oualidpro#8727
+I wish someone can tell me exactly what was the error I made to avoid it in my future submissions
+
+
+[05/01/2023 22:12] co0nan
+Believe me, if you stacked there trying to find what happens you will not improve, report take 3 months to get public. Take a rest and join the next contest.
+
+{Reactions}
+❤️ (3) 
+
+[05/01/2023 22:13] oualidpro#8727
+but if I can't know where I messed things up ... I will keep doing the same error again and again
+
+
+[05/01/2023 22:40] madalad
+for gas & qa reports its likely just the amount of issues in the report that hurt your grade
+
+
+[05/01/2023 23:40] 0xsmartcontractsamurai
+I got nothing! 😂 🤣 😿 💩
+
+{Reactions}
+hi5 (2) 👍🏻 
+
+[05/02/2023 00:24] _oceansky
+I wonder how many wardens got nothing same with me haha. Better luck next time folks!  I wish everyone can have their share of reward pie someday. Keep grinding 👌
+
+
+[05/02/2023 00:25] bluealder
+how long until the report is published usually?
+
+
+[05/02/2023 01:49] devabdee
+Alhumdulilah. Congrats Everyone ❤️‍🔥
+
+{Reactions}
+🫡 
+
+[05/02/2023 07:25] Ding#0802
+This was really competitive. Good for the the Asymmetry team. Kudos to the judges for such great work.
+
+
+[05/02/2023 08:33] pronobis4
+I'll buy myself a coffee, thanks. ☕ 
+A lot of people, a lot of competition, interesting. I wonder how many contestants there were if almost 250 got prizes 🤯
+
+{Reactions}
+🫡 
+
+[05/02/2023 10:45] cloudellie
+The csv containing leaderboard data has been moved to another repo, so you won't see a PR -- but the data is still publicly available here: https://code4rena.com/community-resources/findings.csv
+
+{Reactions}
+❤️ (4) 
+
+[05/03/2023 10:06] dicethedev
+Made it to list. Interesting
+
+
+[05/04/2023 20:09] infectedfuture
+this makes me relativize haha, I'm pretty sure I found a medium (my first!) but the 13$ payout (and first payout!) made me think maybe it was just the QA
+
+
+[05/04/2023 20:13] infectedfuture
+oh I've just checked the csv and understood it, so no valid medium for this time :thisisfine:
+
+
+[05/05/2023 15:23] 0xepley
+Got 0.14 for 1 high
+
+{Reactions}
+😂 (5) 😢 (2) 
+
+[05/05/2023 18:42] 0xfusion
+Yeah, got 1.88 for two highs 😅
+
+
+[05/05/2023 20:02] 0xsorrynotsorry
+John Nash could have found the Game Theory earlier even if he was on C4 🙂
+
+{Reactions}
+😅 (2) chefskiss alphafrog 
+
+[05/05/2023 20:03] 0xsorrynotsorry
+Competition is real
+
+
+[05/23/2023 17:47] cryptothemex
+People got 1 high, but payout is too small, something wrong with stats?
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - asymmetry-mar24 [1088690534735945789].txt_Files/image-D60BC.png
+
+
+[05/23/2023 18:04] milotruck
+It's correct, some highs had a lot of duplicates which reduced its payout amount to dust
+
+{Reactions}
+👍 (5) sadpepe (2) 
+
+[05/26/2023 03:59] 0xtraub
+Now I'm curious af cause I didn't find that high and got like $15 for a single medium
+
+
+[05/26/2023 12:56] carlitox477
+More dups and the issue the rewards decay exponentially
+
+{Reactions}
+👍 
+
+[06/12/2023 20:59] Lukke#8717
+Report when? Not uploaded yet?
+
+
+[06/26/2023 10:50] 0xffchain
+Seems this report wont come out anytime soon.
+
+
+[07/07/2023 15:14] infectedfuture
+\:(
+
+
+[07/31/2023 18:50] 0x4ka5h
+em!
+
+
+[07/31/2023 20:26] uncle Jeff#4407
+agreed
+
+
+[08/05/2023 15:22] infectedfuture
+its out \:)
+
+
+==============================================================
+Exported 553 message(s)
+==============================================================
