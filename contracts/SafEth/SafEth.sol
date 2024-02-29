@@ -51,8 +51,8 @@ contract SafEth is
     ) external initializer {
         ERC20Upgradeable.__ERC20_init(_tokenName, _tokenSymbol);
         _transferOwnership(msg.sender);
-        minAmount = 5 * 10 ** 17; // initializing with .5 ETH as minimum
-        maxAmount = 200 * 10 ** 18; // initializing with 200 ETH as maximum
+        minAmount = 0.5 ether; // initializing with .5 ETH as minimum
+        maxAmount = 200 ether; // initializing with 200 ETH as maximum
     }
 
     /**
@@ -60,25 +60,40 @@ contract SafEth is
         @dev - Deposits into each derivative based on its weight
         @dev - Mints safEth in a redeemable value which equals to the correct percentage of the total staked value
     */
+
+    error StakingIsPaused();
+    error AmountTooLow();
+    error AmountTooHigh();
+
     function stake() external payable {
-        require(pauseStaking == false, "staking is paused");
-        require(msg.value >= minAmount, "amount too low");
-        require(msg.value <= maxAmount, "amount too high");
+        // @audit-ok [gas] - use custom errors rather than revert()/require() strings to save gas
+        if(pauseStaking)
+            revert StakingIsPaused();
+        if(msg.value <= minAmount)
+            revert AmountTooLow();
+        if(msg.value >= maxAmount)
+            revert AmountTooHigh();
 
         uint256 underlyingValue = 0;
 
         // Getting underlying value in terms of ETH for each derivative
-        for (uint i = 0; i < derivativeCount; i++)
+        for (uint i = 0; i < derivativeCount;){
+            IDerivative derivative = derivatives[i];
             underlyingValue +=
-                (derivatives[i].ethPerDerivative(derivatives[i].balance()) *
-                    derivatives[i].balance()) /
-                10 ** 18;
+                (derivative.ethPerDerivative(derivative.balance()) *
+                    derivative.balance()) /
+                1 ether;
+
+            unchecked {
+                i++;
+            }
+        }
 
         uint256 totalSupply = totalSupply();
         uint256 preDepositPrice; // Price of safETH in regards to ETH
         if (totalSupply == 0)
-            preDepositPrice = 10 ** 18; // initializes with a price of 1
-        else preDepositPrice = (10 ** 18 * underlyingValue) / totalSupply;
+            preDepositPrice = 1 ether; // initializes with a price of 1
+        else preDepositPrice = (1 ether * underlyingValue) / totalSupply;
 
         uint256 totalStakeValueEth = 0; // total amount of derivatives worth of ETH in system
         for (uint i = 0; i < derivativeCount; i++) {
@@ -91,14 +106,17 @@ contract SafEth is
             uint256 depositAmount = derivative.deposit{value: ethAmount}();
             uint derivativeReceivedEthValue = (derivative.ethPerDerivative(
                 depositAmount
-            ) * depositAmount) / 10 ** 18;
+            ) * depositAmount) / 1 ether;
             totalStakeValueEth += derivativeReceivedEthValue;
         }
         // mintAmount represents a percentage of the total assets in the system
-        uint256 mintAmount = (totalStakeValueEth * 10 ** 18) / preDepositPrice;
+        uint256 mintAmount = (totalStakeValueEth * 1 ether) / preDepositPrice;
         _mint(msg.sender, mintAmount);
         emit Staked(msg.sender, msg.value, mintAmount);
     }
+
+    error UnstakingIsPaused();
+    error FailedToSendEther();
 
     /**
         @notice - Unstake your safETH into ETH
@@ -106,16 +124,19 @@ contract SafEth is
         @param _safEthAmount - amount of safETH to unstake into ETH
     */
     function unstake(uint256 _safEthAmount) external {
-        require(pauseUnstaking == false, "unstaking is paused");
+        // @audit-ok [gas] - use custom errors rather than revert()/require() strings to save gas
+        if(pauseStaking)
+            revert UnstakingIsPaused();
         uint256 safEthTotalSupply = totalSupply();
         uint256 ethAmountBefore = address(this).balance;
 
         for (uint256 i = 0; i < derivativeCount; i++) {
+            IDerivative derivative = derivatives[i];
             // withdraw a percentage of each asset based on the amount of safETH
-            uint256 derivativeAmount = (derivatives[i].balance() *
+            uint256 derivativeAmount = (derivative.balance() *
                 _safEthAmount) / safEthTotalSupply;
             if (derivativeAmount == 0) continue; // if derivative empty ignore
-            derivatives[i].withdraw(derivativeAmount);
+            derivative.withdraw(derivativeAmount);
         }
         _burn(msg.sender, _safEthAmount);
         uint256 ethAmountAfter = address(this).balance;
@@ -124,7 +145,8 @@ contract SafEth is
         (bool sent, ) = address(msg.sender).call{value: ethAmountToWithdraw}(
             ""
         );
-        require(sent, "Failed to send Ether");
+        if(!sent)
+            revert FailedToSendEther();
         emit Unstaked(msg.sender, ethAmountToWithdraw, _safEthAmount);
     }
 
@@ -138,8 +160,9 @@ contract SafEth is
     function rebalanceToWeights() external onlyOwner {
         uint256 ethAmountBefore = address(this).balance;
         for (uint i = 0; i < derivativeCount; i++) {
-            if (derivatives[i].balance() > 0)
-                derivatives[i].withdraw(derivatives[i].balance());
+            IDerivative derivative = derivatives[i];
+            if (derivative.balance() > 0)
+                derivative.withdraw(derivative.balance());
         }
         uint256 ethAmountAfter = address(this).balance;
         uint256 ethAmountToRebalance = ethAmountAfter - ethAmountBefore;
